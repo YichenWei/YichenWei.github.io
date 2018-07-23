@@ -3,7 +3,7 @@
 [Deep Kinematic Pose Regression](https://arxiv.org/abs/1609.05317) <br />
 Xingyi Zhou, Xiao Sun, Wei Zhang, Shuang Liang, *Yichen Wei* <br />
 ECCV Workshop on Geometry Meets Deep Learning, 2016 <br />
-<img src="publications\ECCV16_DeepKinematicPoseRegression.jpg" alt="drawing" width="600px" align="left"/> <br clear="all" />
+<img src="publications\ECCV16_DeepKinematicPoseRegression.JPG" alt="drawing" width="600px" align="left"/> <br clear="all" />
 
 [Attribute Recognition from Adaptive Parts](https://arxiv.org/abs/1607.01437) <br />
 Luwei Yang, Ligeng Zhu, *Yichen Wei*, Shuang Liang, Ping Tan <br />
