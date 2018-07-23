@@ -51,14 +51,14 @@ ECCV 2018  <br />
 [Code](https://github.com/leoxiaobin/pose.pytorch)  <br />
 
 
-[Learning Region Features for Object Detection](https://arxiv.org/abs/1803.07066) <br /> 
+[Learning Region Features for Object Detection](https://arxiv.org/abs/1803.07066) <br />
 Jiayuan Gu, Han Hu, Liwei Wang, *Yichen Wei*, Jifeng Dai <br />
 ECCV 2018 <br />
-
 
 [Integral Human Pose Regression](https://arxiv.org/abs/1711.08229) <br />
 Xiao Sun, Bin Xiao, Shuang Liang, *Yichen Wei* <br />
 ECCV 2018 <br />
+[Slides](https://jimmysuen.github.io/slides/xiaosun_integral_human_pose_regression.pptx) [Code](https://github.com/JimmySuen/pytorch-integral-human-pose) <br />
 
 [Relation Networks for Object Detection](https://arxiv.org/abs/1711.11575) <br />
 Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, *Yichen Wei* <br />
@@ -71,7 +71,7 @@ Xizhou Zhu, Jifeng Dai, Lu Yuan, *Yichen Wei* <br />
 CVPR 2018 (**Spotlight**) <br />
 
 
-[Pseudo-Mask Augmented Object Detection](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0910.pdf) <br /> 
+[Pseudo-Mask Augmented Object Detection](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0910.pdf) <br />
 Xiangyun Zhao, Shuang Liang, *Yichen Wei* <br />
 CVPR 2018 <br />
 
@@ -91,7 +91,7 @@ ICCV 2017 <br />
 [Compositional Human Pose Regression](https://arxiv.org/abs/1704.00159) <br />
 Xiao Sun, Jiaxiang Shang, Shuang Liang, *Yichen Wei* <br />
 ICCV 2017 <br />
-[Video](https://www.youtube.com/watch?v=c-hgHqVK90M) <br />
+[Slides](https://jimmysuen.github.io/slides/xiaosun_compositional_pose.pptx) [Video](https://www.youtube.com/watch?v=c-hgHqVK90M) <br />
 
 
 [Towards 3D Human Pose Estimation in the Wild: A Weakly-Supervised Approach](https://arxiv.org/abs/1704.02447) <br />
