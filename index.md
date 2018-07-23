@@ -1,6 +1,6 @@
 **Yichen Wei (危夷晨)**
 ==========
-<img src="https://yichenwei.github.io/yichen_2014_crop.jpg" alt="drawing" width="360px" align="left"/> 
+<img src="./yichen_2014_crop.jpg" alt="drawing" width="360px" align="left"/> 
 
 <br clear="all" />
 
@@ -37,6 +37,8 @@ Please send me your resume with subject "Job Application in Megvii Research Shan
 - [COCO Challenge 2017](https://places-coco2017.github.io/#winners), 3rd place in object detection task.
 - [COCO Challenge 2016](http://image-net.org/challenges/ilsvrc+coco2016), 1st place in object segmentation task.
 
+##### [Early Publications](publications.html)
+
 ##### Recent Publications
 
 [Towards High Performance Video Object Detection for Mobiles](https://arxiv.org/abs/1804.05830)  <br />
@@ -59,7 +61,8 @@ Xiao Sun, Bin Xiao, Shuang Liang, *Yichen Wei* <br />
 ECCV 2018 <br />
 
 [Relation Networks for Object Detection](https://arxiv.org/abs/1711.11575) <br />
-Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, *Yichen Wei*, CVPR 2018 (**Oral**) <br />
+Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, *Yichen Wei* <br />
+CVPR 2018 (**Oral**) <br />
 [Code](https://github.com/msracver/Relation-Networks-for-Object-Detection) <br />
 
 
