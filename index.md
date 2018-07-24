@@ -1,6 +1,6 @@
 **Yichen Wei (危夷晨)**
 ==========
-<img src="./yichen_2014_crop.jpg" alt="drawing" width="360px" align="left"/> 
+<img src="./yichen_2014_crop.jpg" alt="drawing" width="300px" align="left"/> 
 
 <br clear="all" />
 
@@ -17,11 +17,11 @@ I joined Megvii on July, 2018. Before that, I spent 12 years in Visual Computing
 
 My research interests include 3D vision, object recognition, detection, tracking and pose estimation.
 
-My [Google Scholar](https://scholar.google.com/citations?user=8qSLKUEAAAAJ&hl=en) citation is above 5,000, h-index is 28.
+My [Google Scholar](https://scholar.google.com/citations?user=8qSLKUEAAAAJ&hl=en) citation is above 5,000, h-index is 29.
 
-My research work has been transferred to [Kinect Identity in XBox](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [Microsoft Cognitive Service](https://azure.microsoft.com/en-us/services/cognitive-services/), Bing, Office, and Microsoft XiaoIce, etc.
+My work has been transferred to [Kinect Identity in XBox](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [Microsoft Cognitive Service](https://azure.microsoft.com/en-us/services/cognitive-services/), Bing, Office, and Microsoft XiaoIce, etc.
 
-##### Long term job opening: researcher / engineer / intern in Shanghai.
+##### Job opening: researcher / engineer / intern in Shanghai.
 
 Please send me your resume with subject "Job Application in Megvii Research Shanghai" or "Intern Application in Megvii Research Shanghai".
 
