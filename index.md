@@ -23,7 +23,9 @@ My work has been transferred to [Kinect Identity in XBox](https://ieeexplore.iee
 
 ##### Job opening: researcher / engineer / intern in Shanghai.
 
-Please send me your resume with subject "Job Application in Megvii Research Shanghai" or "Intern Application in Megvii Research Shanghai".
+Please send me your resume with subject "Job Application in Megvii Research Shanghai" or "Intern Application in Megvii Research Shanghai". 
+
+See [job description](recruit.html).
 
 ##### News:
 
