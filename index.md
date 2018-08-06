@@ -29,8 +29,8 @@ See [job description](recruit.html).
 
 ##### News:
 
+- Update job description in Shanghai.
 - Three ECCV 2018 papers are accepted.
-
 - Three CVPR 2018 papers are accepted.
 
 
@@ -113,7 +113,7 @@ Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji, *Yichen Wei* <br />
 CVPR 2017 (**Spotlight**) <br />
 [Code](https://github.com/msracver/FCIS) <br />
 
-Last Modification: July 24th, 2018
+Last Modification: August 6th, 2018
 
 
 <script>
