@@ -17,7 +17,7 @@ I joined Megvii on July, 2018. Before that, I spent 12 years in Visual Computing
 
 My research interests include 3D vision, object recognition, detection, tracking and pose estimation.
 
-My [Google Scholar](https://scholar.google.com/citations?user=8qSLKUEAAAAJ&hl=en) citation is about 5,700, h-index is 31.
+My [Google Scholar](https://scholar.google.com/citations?hl=en&pli=1&user=O7A6nYMAAAAJ) citation is about 5,700, h-index is 31.
 
 My work has been transferred to [Kinect Identity in XBox](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [Microsoft Cognitive Service](https://azure.microsoft.com/en-us/services/cognitive-services/), Bing, Office, and Microsoft XiaoIce, etc.
 
