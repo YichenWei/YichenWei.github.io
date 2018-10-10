@@ -17,7 +17,7 @@ I joined Megvii on July, 2018. Before that, I spent 12 years in Visual Computing
 
 My research interests include 3D vision, object recognition, detection, tracking and pose estimation.
 
-My [Google Scholar](https://scholar.google.com/citations?user=8qSLKUEAAAAJ&hl=en) citation is above 5,000, h-index is 29.
+My [Google Scholar](https://scholar.google.com/citations?user=8qSLKUEAAAAJ&hl=en) citation is about 5,700, h-index is 31.
 
 My work has been transferred to [Kinect Identity in XBox](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [Microsoft Cognitive Service](https://azure.microsoft.com/en-us/services/cognitive-services/), Bing, Office, and Microsoft XiaoIce, etc.
 
@@ -27,17 +27,13 @@ Please send me your resume with subject "Job Application in Megvii Research Shan
 
 See [job description](recruit.html).
 
-##### News:
+##### Computer Vision Challenge Winnings:
 
-- Update job description in Shanghai.
-- Three ECCV 2018 papers are accepted.
-- Three CVPR 2018 papers are accepted.
+- Our [integral pose regression method](https://github.com/JimmySuen/integral-human-pose) has won the 2nd place of  [ECCV 2018 3D Human Pose Estimation Challenge](http://vision.imar.ro/human3.6m/ranking.php)
+- Our [simple baseline method](https://github.com/Microsoft/human-pose-estimation.pytorch) has won the winner of  [PoseTrack2018 Multi-person Pose Tracking Challenge](https://posetrack.net/workshops/eccv2018/posetrack_eccv_2018_results.html) and the 2nd place of  [keypoint detection task of COCO 2018](http://cocodataset.org/#keypoints-leaderboard)
 
-
-##### Awards:
-
-- [COCO Challenge 2017](https://places-coco2017.github.io/#winners), 3rd place in object detection task.
-- [COCO Challenge 2016](http://image-net.org/challenges/ilsvrc+coco2016), 1st place in object segmentation task.
+- [COCO Challenge 2017](https://places-coco2017.github.io/#winners), 3rd place in object detection task with [Deformable Convolutional Networks](https://github.com/msracver/Deformable-ConvNets).
+- [COCO Challenge 2016](http://image-net.org/challenges/ilsvrc+coco2016), 1st place in object segmentation task with [Fully Convolutional Instance-aware Semantic Segmentation](https://github.com/msracver/FCIS).
 
 ##### [Early Publications](publications.html)
 
@@ -50,7 +46,7 @@ Tech report, arXiv, April 2018  <br />
 [Simple Baselines for Human Pose Estimation and Tracking](https://arxiv.org/abs/1804.06208)  <br />
 Bin Xiao, Haiping Wu, *Yichen Wei* <br />
 ECCV 2018  <br />
-[Code](https://github.com/leoxiaobin/pose.pytorch)  <br />
+[Code](https://github.com/Microsoft/human-pose-estimation.pytorch)  <br />
 
 
 [Learning Region Features for Object Detection](https://arxiv.org/abs/1803.07066) <br />
@@ -60,7 +56,7 @@ ECCV 2018 <br />
 [Integral Human Pose Regression](https://arxiv.org/abs/1711.08229) <br />
 Xiao Sun, Bin Xiao, Shuang Liang, *Yichen Wei* <br />
 ECCV 2018 <br />
-[Slides](https://jimmysuen.github.io/slides/xiaosun_integral_human_pose_regression.pptx) [Code](https://github.com/JimmySuen/pytorch-integral-human-pose) <br />
+[Slides](https://jimmysuen.github.io/slides/xiaosun_integral_human_pose_regression.pptx) [Code](https://github.com/JimmySuen/integral-human-pose) <br />
 
 [Relation Networks for Object Detection](https://arxiv.org/abs/1711.11575) <br />
 Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, *Yichen Wei* <br />
@@ -113,7 +109,7 @@ Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji, *Yichen Wei* <br />
 CVPR 2017 (**Spotlight**) <br />
 [Code](https://github.com/msracver/FCIS) <br />
 
-Last Modification: August 6th, 2018
+Last Modification: October 10th, 2018
 
 
 <script>
