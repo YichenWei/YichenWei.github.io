@@ -9,15 +9,15 @@
 
 <!--- comment ---> 
 
-**Director of [Megvii](https://megvii.com/) (Face++) Research Shanghai**
+#### **Director of Megvii (Face++) Research Shanghai**
 
 Email: weiyichen at megvii.com
 
-I joined Megvii on July, 2018. Before that, I spent 12 years in Visual Computing group, Microsoft Research Asia. I received my Ph.D degree in Hong Kong University of Science and Technology in 2006, and B.S. degree in Peking University in 2001, respectively.
+I joined [MEGVII](https://megvii.com/) on July, 2018. Before that, I spent 12 years in Visual Computing group, [Microsoft Research Asia](https://www.msra.cn/). I received my Ph.D degree in Hong Kong University of Science and Technology in 2006, and B.S. degree in Peking University in 2001, respectively.
 
-My research interests include 3D vision, object recognition, detection, tracking and pose estimation.
+My research interests include deep learning and computer vision.
 
-My [Google Scholar](https://scholar.google.com/citations?hl=en&pli=1&user=O7A6nYMAAAAJ) citation is about 5,700, h-index is 31.
+My [Google Scholar](https://scholar.google.com/citations?hl=en&pli=1&user=O7A6nYMAAAAJ) citation is about 9,830, h-index is 38.
 
 My work has been transferred to [Kinect Identity in XBox](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [Microsoft Cognitive Service](https://azure.microsoft.com/en-us/services/cognitive-services/), Bing, Office, and Microsoft XiaoIce, etc.
 
@@ -27,98 +27,69 @@ Please send me your resume with subject "Job Application in Megvii Research Shan
 
 See [job description](recruit.html).
 
+##### News
+
+- March 2020, MEGVII's open source deep learning framework [MegEngine](https://megengine.org.cn/) (天元) is available on [GitHub](https://github.com/MegEngine).
+- November 2019, I gave a tech [talk](https://www.bilibili.com/video/av77388408) on "uncertainty learning in computer vision" in 将门创投.
+- April 2019, our work on [AutoML](https://arxiv.org/abs/1904.00420) is reported ([新智元](https://mp.weixin.qq.com/s/Dmml7DrujXnOAEhU7vugmw), [机器之心](https://mp.weixin.qq.com/s/0_zFoMUh-4s8BKl2rSzmig), [量子位](https://mp.weixin.qq.com/s/pCsZi7INorI0HN7o5zf1Bw), ...).
+- Jan 2019, I was [interviewed](https://new.qq.com/omn/20190110/20190110A0G9OG.html) by "数据科学50人" program.
+- July 2018, I was [interviewed](https://baijiahao.baidu.com/s?id=1607139006385580393&wfr=spider&for=pc) by 新智元 after joining MEGVII.
+
 ##### Computer Vision Challenge Winnings:
 
+- [COCO and Mapillary Challenge 2019](http://cocodataset.org/workshop/coco-mapillary-iccv-2019.html), 1st place in [keypoint detection](http://cocodataset.org/index.htm#keypoints-2019) task with [Rethinking on Multi-Stage Networks for Human Pose Estimation](https://arxiv.org/abs/1901.00148)
 - Our [integral pose regression method](https://github.com/JimmySuen/integral-human-pose) has won the 2nd place of  [ECCV 2018 3D Human Pose Estimation Challenge](http://vision.imar.ro/human3.6m/ranking.php)
 - Our [simple baseline method](https://github.com/Microsoft/human-pose-estimation.pytorch) has won the winner of  [PoseTrack2018 Multi-person Pose Tracking Challenge](https://posetrack.net/workshops/eccv2018/posetrack_eccv_2018_results.html) and the 2nd place of  [keypoint detection task of COCO 2018](http://cocodataset.org/#keypoints-leaderboard)
-
 - [COCO Challenge 2017](https://places-coco2017.github.io/#winners), 3rd place in object detection task with [Deformable Convolutional Networks](https://github.com/msracver/Deformable-ConvNets).
 - [COCO Challenge 2016](http://image-net.org/challenges/ilsvrc+coco2016), 1st place in object segmentation task with [Fully Convolutional Instance-aware Semantic Segmentation](https://github.com/msracver/FCIS).
 
-##### [Early Publications](publications.html)
-
 ##### Recent Publications
 
-[Towards High Performance Video Object Detection for Mobiles](https://arxiv.org/abs/1804.05830)  <br />
-Xizhou Zhu, Jifeng Dai, Xingchi Zhu, Yichen Wei, Lu Yuan  <br />
-Tech report, arXiv, April 2018  <br />
+[Balanced Alignment for Face Recognition: A Joint Learning Approach](https://arxiv.org/abs/2003.10168)<br />Huawei Wei, Peng Lu, Yichen Wei<br />Tech report, arXiv, March 2020
 
-[Simple Baselines for Human Pose Estimation and Tracking](https://arxiv.org/abs/1804.06208)  <br />
-Bin Xiao, Haiping Wu, *Yichen Wei* <br />
-ECCV 2018  <br />
-[Code](https://github.com/Microsoft/human-pose-estimation.pytorch)  <br />
+[Circle Loss: A Unified Perspective of Pair Similarity Optimization](https://arxiv.org/abs/2002.10857) <br />Yifan Sun, Changmao Cheng, Yuhan Zhang, Chi Zhang, Liang Zheng, Zhongdao Wang, Yichen Wei <br />CVPR 2020 (**Oral**)
 
+[Data Uncertainty Learning in Face Recognition](https://arxiv.org/abs/2003.11339)<br/>Jie Chang, Zhonghao Lan, Changmao Cheng, Yichen Wei<br/>CVPR 2020
 
-[Learning Region Features for Object Detection](https://arxiv.org/abs/1803.07066) <br />
-Jiayuan Gu, Han Hu, Liwei Wang, *Yichen Wei*, Jifeng Dai <br />
-ECCV 2018 <br />
+[Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization](https://arxiv.org/abs/2001.06838) <br /> Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun <br />ICLR 2020
 
-[Integral Human Pose Regression](https://arxiv.org/abs/1711.08229) <br />
-Xiao Sun, Bin Xiao, Shuang Liang, *Yichen Wei* <br />
-ECCV 2018 <br />
-[Slides](https://jimmysuen.github.io/slides/xiaosun_integral_human_pose_regression.pptx) [Code](https://github.com/JimmySuen/integral-human-pose) <br />
+[3D Dense Face Alignment via Graph Convolution Networks](https://arxiv.org/abs/1904.05562)<br />Huawei Wei, Shuang Liang, Yichen Wei<br />Tech report, arXiv, April 2019<br />
 
-[Relation Networks for Object Detection](https://arxiv.org/abs/1711.11575) <br />
-Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, *Yichen Wei* <br />
-CVPR 2018 (**Oral**) <br />
-[Code](https://github.com/msracver/Relation-Networks-for-Object-Detection) <br />
+[Single Path One-Shot Neural Architecture Search with Uniform Sampling](https://arxiv.org/abs/1904.00420)<br />Zichao Guo, Xiangyu Zhang, Haoyuan Mu, Wen Heng, Zechun Liu, Yichen Wei, Jian sun <br />Tech report, arXiv, Mar 2019<br />
 
+[Vehicle Re-Identification With Viewpoint-Aware Metric Learning](http://openaccess.thecvf.com/content_ICCV_2019/html/Chu_Vehicle_Re-Identification_With_Viewpoint-Aware_Metric_Learning_ICCV_2019_paper.html)<br />Ruihang Chu, Yifan Sun, Yadong Li, Zheng Liu, Chi Zhang, Yichen Wei<br />ICCV 2019
 
-[Towards High Performance Video Object Detection](https://arxiv.org/abs/1711.11577) <br />
-Xizhou Zhu, Jifeng Dai, Lu Yuan, *Yichen Wei* <br />
-CVPR 2018 (**Spotlight**) <br />
+[Re-Identification Supervised Texture Generation](http://openaccess.thecvf.com/content_CVPR_2019/html/Wang_Re-Identification_Supervised_Texture_Generation_CVPR_2019_paper.html)<br />Jian Wang, Yunshan Zhong, Yachun Li, Chi Zhang, Yichen Wei<br />CVPR 2019
 
+[Rethinking on Multi-Stage Networks for Human Pose Estimation](https://arxiv.org/abs/1901.00148)<br />Wenbo Li, Zhicheng Wang, Binyi Yin, Qixiang Peng, Yuming Du, Tianzi Xiao, Gang Yu, Hongtao Lu, Yichen Wei, Jian Sun<br />Tech report, arXiv, Jan 2019, 1st winner for [COCO 2019 keypoint detection](http://cocodataset.org/index.htm#keypoints-2019)
 
-[Pseudo-Mask Augmented Object Detection](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0910.pdf) <br />
-Xiangyun Zhao, Shuang Liang, *Yichen Wei* <br />
-CVPR 2018 <br />
+[Towards High Performance Video Object Detection for Mobiles](https://arxiv.org/abs/1804.05830)  <br />Xizhou Zhu, Jifeng Dai, Xingchi Zhu, Yichen Wei, Lu Yuan  <br />Tech report, arXiv, April 2018  <br />
 
+[Simple Baselines for Human Pose Estimation and Tracking](https://arxiv.org/abs/1804.06208)  <br />Bin Xiao, Haiping Wu, Yichen Wei <br />ECCV 2018  <br />[Code](https://github.com/Microsoft/human-pose-estimation.pytorch)  <br />
+
+[Learning Region Features for Object Detection](https://arxiv.org/abs/1803.07066) <br />Jiayuan Gu, Han Hu, Liwei Wang, Yichen Wei, Jifeng Dai <br />ECCV 2018 <br />
+
+[Integral Human Pose Regression](https://arxiv.org/abs/1711.08229) <br />Xiao Sun, Bin Xiao, Shuang Liang, Yichen Wei <br />ECCV 2018 <br />[Slides](https://jimmysuen.github.io/slides/xiaosun_integral_human_pose_regression.pptx) [Code](https://github.com/JimmySuen/integral-human-pose) <br />
+
+[Relation Networks for Object Detection](https://arxiv.org/abs/1711.11575) <br />Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, Yichen Wei <br />CVPR 2018 (**Oral**) <br />[Code](https://github.com/msracver/Relation-Networks-for-Object-Detection) <br />
+
+[Towards High Performance Video Object Detection](https://arxiv.org/abs/1711.11577) <br />Xizhou Zhu, Jifeng Dai, Lu Yuan, Yichen Wei <br />CVPR 2018 (**Spotlight**) <br />
+
+[Pseudo-Mask Augmented Object Detection](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0910.pdf) <br />Xiangyun Zhao, Shuang Liang, Yichen Wei <br />CVPR 2018 <br />
 
 [Deformable Convolutional Networks](https://arxiv.org/abs/1703.06211)
-Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, and *Yichen Wei* <br />
-ICCV 2017 (**Oral**) <br />
-[Code](https://github.com/msracver/Deformable-ConvNets)  [Slides](http://www.jifengdai.org/slides/Deformable_Convolutional_Networks_Oral.pdf)  [COCO 2017 workshop](http://presentations.cocodataset.org/COCO17-Detect-MSRA.pdf)  [A third party demon on MNIST](https://github.com/felixlaumon/deform-conv) <br />
+Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, and Yichen Wei <br />ICCV 2017 (**Oral**) <br />[Code](https://github.com/msracver/Deformable-ConvNets)  [Slides](http://www.jifengdai.org/slides/Deformable_Convolutional_Networks_Oral.pdf)  [COCO 2017 workshop](http://presentations.cocodataset.org/COCO17-Detect-MSRA.pdf)  [A third party demon on MNIST](https://github.com/felixlaumon/deform-conv) <br />
 
+[Flow-Guided Feature Aggregation for Video Object Detection](https://arxiv.org/abs/1703.10025) <br />Xizhou Zhu, Yujie Wang, Jifeng Dai, Lu Yuan, Yichen Wei <br />ICCV 2017 <br />[Code](https://github.com/msracver/Flow-Guided-Feature-Aggregation)  [Video](https://www.youtube.com/watch?v=R2h3DbTPvVg) <br />
 
-[Flow-Guided Feature Aggregation for Video Object Detection](https://arxiv.org/abs/1703.10025) <br />
-Xizhou Zhu, Yujie Wang, Jifeng Dai, Lu Yuan, *Yichen Wei* <br />
-ICCV 2017 <br />
-[Code](https://github.com/msracver/Flow-Guided-Feature-Aggregation)  [Video](https://www.youtube.com/watch?v=R2h3DbTPvVg) <br />
+[Compositional Human Pose Regression](https://arxiv.org/abs/1704.00159) <br />Xiao Sun, Jiaxiang Shang, Shuang Liang, Yichen Wei <br />ICCV 2017 <br />[Slides](https://jimmysuen.github.io/slides/xiaosun_compositional_pose.pptx) [Video](https://www.youtube.com/watch?v=c-hgHqVK90M) <br />
 
+[Towards 3D Human Pose Estimation in the Wild: A Weakly-Supervised Approach](https://arxiv.org/abs/1704.02447) <br />Xingyi Zhou, Qixing Huang, Xiao Sun, Xiangyang Xue, Yichen Wei <br />ICCV 2017 <br />[Code](https://github.com/xingyizhou/pose-hg-3d) <br />
 
-[Compositional Human Pose Regression](https://arxiv.org/abs/1704.00159) <br />
-Xiao Sun, Jiaxiang Shang, Shuang Liang, *Yichen Wei* <br />
-ICCV 2017 <br />
-[Slides](https://jimmysuen.github.io/slides/xiaosun_compositional_pose.pptx) [Video](https://www.youtube.com/watch?v=c-hgHqVK90M) <br />
+[Deep Feature Flow for Video Recognition](https://arxiv.org/abs/1611.07715) <br />Xizhou Zhu, Yuwen Xiong, Jifeng Dai, Lu Yuan, Yichen Wei <br />CVPR 2017 <br />[Code](https://github.com/msracver/Flow-Guided-Feature-Aggregation)  [Video](https://www.youtube.com/watch?v=R2h3DbTPvVg) <br />
 
+[Fully Convolutional Instance-aware Semantic Segmentation](https://arxiv.org/abs/1611.07709) <br />Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji, Yichen Wei <br />CVPR 2017 (**Spotlight**) <br />[Code](https://github.com/msracver/FCIS) <br />
 
-[Towards 3D Human Pose Estimation in the Wild: A Weakly-Supervised Approach](https://arxiv.org/abs/1704.02447) <br />
-Xingyi Zhou, Qixing Huang, Xiao Sun, Xiangyang Xue, *Yichen Wei* <br />
-ICCV 2017 <br />
-[Code](https://github.com/xingyizhou/pose-hg-3d) <br />
+##### [Early Publications](publications.html)
 
-
-[Deep Feature Flow for Video Recognition](https://arxiv.org/abs/1611.07715) <br />
-Xizhou Zhu, Yuwen Xiong, Jifeng Dai, Lu Yuan, *Yichen Wei* <br />
-CVPR 2017 <br />
-[Code](https://github.com/msracver/Flow-Guided-Feature-Aggregation)  [Video](https://www.youtube.com/watch?v=R2h3DbTPvVg) <br />
-
-
-[Fully Convolutional Instance-aware Semantic Segmentation](https://arxiv.org/abs/1611.07709) <br />
-Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji, *Yichen Wei* <br />
-CVPR 2017 (**Spotlight**) <br />
-[Code](https://github.com/msracver/FCIS) <br />
-
-Last Modification: October 10th, 2018
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-82196129-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+Last Modification: March 20th, 2020
