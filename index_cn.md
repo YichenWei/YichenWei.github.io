@@ -1,4 +1,4 @@
-**Yichen Wei (危夷晨)**
+**危夷晨**
 ==========
 <img src="./yichen_2014_crop.jpg" alt="drawing" width="300px" align="left"/> 
 
@@ -9,35 +9,31 @@
 
 <!--- comment ---> 
 
-#### **Director of Megvii (Face++) Research Shanghai**
+#### **旷视科技上海研究院院长**
 
-切换至[中文主页](index_cn.html)。
+电子邮件: weiyichen at megvii.com
 
-Email: weiyichen at megvii.com
+我于2018年7月加入[旷视科技](https://megvii.com/)，任上海研究院院长。在此之前, 我在[微软亚洲研究院](https://www.msra.cn/)视觉计算组工作了12年。我于2006年在香港科技大学获得博士学位，于2001年在北京大学获得学士学位。
 
-I joined [MEGVII](https://megvii.com/) on July, 2018. Before that, I spent 12 years in Visual Computing group, [Microsoft Research Asia](https://www.msra.cn/). I received my Ph.D degree in Hong Kong University of Science and Technology in 2006, and B.S. degree in Peking University in 2001, respectively.
+我的研究方向为深度学习和计算机视觉。
 
-My research interests include deep learning and computer vision.
+我的[谷歌学术](https://scholar.google.com/citations?hl=en&pli=1&user=O7A6nYMAAAAJ)引用数大概为10,000, h指数为38。
 
-My [Google Scholar](https://scholar.google.com/citations?hl=en&pli=1&user=O7A6nYMAAAAJ) citation is about 10,000, h-index is 38.
+我在微软期间的研究工作成功转化到微软的产品，包括[Kinect 身份识别](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [微软认知服务](https://azure.microsoft.com/en-us/services/cognitive-services/), 必应, Office, and 微软小冰, 等等。
 
-My work has been transferred to [Kinect Identity in XBox](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [Microsoft Cognitive Service](https://azure.microsoft.com/en-us/services/cognitive-services/), Bing, Office, and Microsoft XiaoIce, etc.
+##### 上海研究院的工作岗位长期开放（研究员/工程师/实习）
 
-##### Job opening: researcher / engineer / intern in Shanghai.
+有意向者请发简历给我，主题为“旷视上海研究院工作申请”或者“旷视上海研究院实习申请”。
 
-Please send me your resume with subject "Job Application in Megvii Research Shanghai" or "Intern Application in Megvii Research Shanghai". 
+##### 动态
 
-See [job description](recruit.html).
+- 2020年3月, 旷视的深度学习框架[MegEngine](https://megengine.org.cn/) (天元) 在[GitHub](https://github.com/MegEngine)开源。
+- 2019年11月，我在将门创投进行了一个技术[宣讲](https://www.bilibili.com/video/av77388408) ，主题为 "不确定性估计在计算机视觉中的应用"。
+- 2019年4月，我们关于[AutoML](https://arxiv.org/abs/1904.00420)的工作获得一些公众报道（[新智元](https://mp.weixin.qq.com/s/Dmml7DrujXnOAEhU7vugmw), [机器之心](https://mp.weixin.qq.com/s/0_zFoMUh-4s8BKl2rSzmig), [量子位](https://mp.weixin.qq.com/s/pCsZi7INorI0HN7o5zf1Bw), ...）。
+- 2019年1月, 我接受了"数据科学50人" 栏目的[采访](https://new.qq.com/omn/20190110/20190110A0G9OG.html)。
+- 2019年7月，我接受了新智元的[采访](https://baijiahao.baidu.com/s?id=1607139006385580393&wfr=spider&for=pc)。
 
-##### News
-
-- March 2020, MEGVII's open source deep learning framework [MegEngine](https://megengine.org.cn/) (天元) is available on [GitHub](https://github.com/MegEngine).
-- November 2019, I gave a tech [talk](https://www.bilibili.com/video/av77388408) on "uncertainty learning in computer vision" in 将门创投.
-- April 2019, our work on [AutoML](https://arxiv.org/abs/1904.00420) is reported ([新智元](https://mp.weixin.qq.com/s/Dmml7DrujXnOAEhU7vugmw), [机器之心](https://mp.weixin.qq.com/s/0_zFoMUh-4s8BKl2rSzmig), [量子位](https://mp.weixin.qq.com/s/pCsZi7INorI0HN7o5zf1Bw), ...).
-- Jan 2019, I was [interviewed](https://new.qq.com/omn/20190110/20190110A0G9OG.html) by "数据科学50人" program.
-- July 2018, I was [interviewed](https://baijiahao.baidu.com/s?id=1607139006385580393&wfr=spider&for=pc) by 新智元 after joining MEGVII.
-
-##### Computer Vision Challenge Winnings:
+##### 计算机视觉竞赛获奖
 
 - [COCO and Mapillary Challenge 2019](http://cocodataset.org/workshop/coco-mapillary-iccv-2019.html), 1st place in [keypoint detection](http://cocodataset.org/index.htm#keypoints-2019) task with [Rethinking on Multi-Stage Networks for Human Pose Estimation](https://arxiv.org/abs/1901.00148)
 - Our [integral pose regression method](https://github.com/JimmySuen/integral-human-pose) has won the 2nd place of  [ECCV 2018 3D Human Pose Estimation Challenge](http://vision.imar.ro/human3.6m/ranking.php)
@@ -45,7 +41,7 @@ See [job description](recruit.html).
 - [COCO Challenge 2017](https://places-coco2017.github.io/#winners), 3rd place in object detection task with [Deformable Convolutional Networks](https://github.com/msracver/Deformable-ConvNets).
 - [COCO Challenge 2016](http://image-net.org/challenges/ilsvrc+coco2016), 1st place in object segmentation task with [Fully Convolutional Instance-aware Semantic Segmentation](https://github.com/msracver/FCIS).
 
-##### Recent Publications
+##### 最近的科研工作
 
 Circle Loss: A Unified Perspective of Pair Similarity Optimization, CVPR 2020 (**Oral**) <br />Yifan Sun, Changmao Cheng, Yuhan Zhang, Chi Zhang, Liang Zheng, Zhongdao Wang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2002.10857)
 
@@ -92,6 +88,6 @@ Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, and Yichen Wei
 
 [Fully Convolutional Instance-aware Semantic Segmentation](https://www.zpascal.net/cvpr2017/Li_Fully_Convolutional_Instance-Aware_CVPR_2017_paper.pdf), CVPR 2017 (**Spotlight**)<br />Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/1611.07709) <br />[Code](https://github.com/msracver/FCIS) <br />
 
-##### [Early Publications](publications.html)
+##### [早期的科研工作](publications.html)
 
-Last Modification: April 13th, 2020
+最近修改于: 2020年4月13日
