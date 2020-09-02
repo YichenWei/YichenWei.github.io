@@ -19,7 +19,7 @@ I joined [MEGVII](https://megvii.com/) on July, 2018. Before that, I spent 12 ye
 
 My research interests include deep learning and computer vision.
 
-My [Google Scholar](https://scholar.google.com/citations?hl=en&pli=1&user=O7A6nYMAAAAJ) citation is about 10,000, h-index is 38.
+My [Google Scholar](https://scholar.google.com/citations?hl=en&pli=1&user=O7A6nYMAAAAJ) citation is about 11,000, h-index is 40.
 
 My work has been transferred to [Kinect Identity in XBox](https://ieeexplore.ieee.org/document/5742015/), [Windows Hello](https://www.youtube.com/watch?v=1AsoSnOmhvU), [Microsoft Cognitive Service](https://azure.microsoft.com/en-us/services/cognitive-services/), Bing, Office, and Microsoft XiaoIce, etc.
 
@@ -46,18 +46,23 @@ See [job description](recruit.html).
 - [COCO Challenge 2016](http://image-net.org/challenges/ilsvrc+coco2016), 1st place in object segmentation task with [Fully Convolutional Instance-aware Semantic Segmentation](https://github.com/msracver/FCIS).
 
 ##### Recent Publications
+Prime-Aware Adaptive Distillation, ECCV 2020 <br />Youcai Zhang, Zhonghao Lan, Yuchen Dai, Fangao Zeng, Yan Bai, Jie Chang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2008.01458)
 
-Circle Loss: A Unified Perspective of Pair Similarity Optimization, CVPR 2020 (**Oral**) <br />Yifan Sun, Changmao Cheng, Yuhan Zhang, Chi Zhang, Liang Zheng, Zhongdao Wang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2002.10857)
+Spherical Feature Transform for Deep Metric Learning, ECCV 2020 <br />Yuke Zhu, Yan Bai, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2008.01469)
 
-Data Uncertainty Learning in Face Recognition, CVPR 2020<br/>Jie Chang, Zhonghao Lan, Changmao Cheng, Yichen Wei<br/>[arXiv version](https://arxiv.org/abs/2003.11339)
+Angle-based Search Space Shrinking for Neural Architecture SearcSpherical Feature Transform for Deep Metric Learningh, ECCV 2020 <br />Yiming Hu, Yuding Liang, Zichao Guo, Ruosi Wan, Xiangyu Zhang, Yichen Wei, Qingyi Gu, Jian Sun <br />[arXiv version](https://arxiv.org/abs/2004.13431)
+
+Single Path One-Shot Neural Architecture Search with Uniform Sampling, ECCV 2020<br />Zichao Guo, Xiangyu Zhang, Haoyuan Mu, Wen Heng, Zechun Liu, Yichen Wei, Jian sun <br />[Tech report on arXiv](https://arxiv.org/abs/1904.00420)<br />
+
+[Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization](https://openreview.net/pdf?id=SkgGjRVKDS), ICLR 2020 <br />Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun <br />[arXiv version](https://arxiv.org/abs/2001.06838)
+
+[Circle Loss: A Unified Perspective of Pair Similarity Optimization](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization_CVPR_2020_paper.pdf), CVPR 2020 (**Oral**) <br />Yifan Sun, Changmao Cheng, Yuhan Zhang, Chi Zhang, Liang Zheng, Zhongdao Wang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2002.10857)
+
+[Data Uncertainty Learning in Face Recognition](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chang_Data_Uncertainty_Learning_in_Face_Recognition_CVPR_2020_paper.pdf), CVPR 2020<br/>Jie Chang, Zhonghao Lan, Changmao Cheng, Yichen Wei<br/>[arXiv version](https://arxiv.org/abs/2003.11339)
 
 Balanced Alignment for Face Recognition: A Joint Learning Approach<br />Huawei Wei, Peng Lu, Yichen Wei<br />[Tech report on arXiv](https://arxiv.org/abs/2003.10168), March 2020
 
-Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization, ICLR 2020<br /> Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun <br /> [arXiv version](https://arxiv.org/abs/2001.06838)
-
 3D Dense Face Alignment via Graph Convolution Networks<br />Huawei Wei, Shuang Liang, Yichen Wei<br />[Tech report on arXiv](https://arxiv.org/abs/1904.05562), April 2019<br />
-
-Single Path One-Shot Neural Architecture Search with Uniform Sampling<br />Zichao Guo, Xiangyu Zhang, Haoyuan Mu, Wen Heng, Zechun Liu, Yichen Wei, Jian sun <br />[Tech report on arXiv](https://arxiv.org/abs/1904.00420), Mar 2019<br />
 
 [Vehicle Re-Identification With Viewpoint-Aware Metric Learning](http://openaccess.thecvf.com/content_ICCV_2019/papers/Chu_Vehicle_Re-Identification_With_Viewpoint-Aware_Metric_Learning_ICCV_2019_paper.pdf), ICCV 2019<br />Ruihang Chu, Yifan Sun, Yadong Li, Zheng Liu, Chi Zhang, Yichen Wei<br />[arXiv version](https://arxiv.org/abs/1910.04104)
 
@@ -94,4 +99,4 @@ Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, and Yichen Wei
 
 ##### [Early Publications](publications.html)
 
-Last Modification: April 13th, 2020
+Last Modification: September 2nd, 2020
