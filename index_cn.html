@@ -2,20 +2,23 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>index_cn</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
@@ -24,14 +27,14 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
 button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
 p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
@@ -47,7 +50,7 @@ sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); 
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
+figure > table { margin: 0px; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
@@ -64,7 +67,7 @@ div.hr:focus { cursor: none; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
 .md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
@@ -76,27 +79,31 @@ div.hr:focus { cursor: none; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
 pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
@@ -132,11 +139,12 @@ code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
 .html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
 .MathJax_SVG * { transition: none 0s ease 0s; }
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
@@ -147,10 +155,61 @@ table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 
 
 :root {
@@ -160,12 +219,16 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
 @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
-html {
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
     font-size: 16px;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -176,6 +239,19 @@ body {
   	padding: 30px;
     padding-bottom: 100px;
 }
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
 #write > ul:first-child,
 #write > ol:first-child{
     margin-top: 30px;
@@ -230,17 +306,33 @@ h6 code {
     font-size: inherit;
 }
 h1 {
-    padding-bottom: .3em;
     font-size: 2.25em;
     line-height: 1.2;
     border-bottom: 1px solid #eee;
 }
 h2 {
-   padding-bottom: .3em;
     font-size: 1.75em;
     line-height: 1.225;
     border-bottom: 1px solid #eee;
 }
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
 h3 {
     font-size: 1.5em;
     line-height: 1.43;
@@ -305,7 +397,7 @@ table {
     word-break: initial;
 }
 table tr {
-    border-top: 1px solid #dfe2e5;
+    border: 1px solid #dfe2e5;
     margin: 0;
     padding: 0;
 }
@@ -313,24 +405,24 @@ table tr:nth-child(2n),
 thead {
     background-color: #f8f8f8;
 }
-table tr th {
+table th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
-table tr td {
+table td {
     border: 1px solid #dfe2e5;
     margin: 0;
     padding: 6px 13px;
 }
-table tr th:first-child,
-table tr td:first-child {
+table th:first-child,
+table td:first-child {
     margin-top: 0;
 }
-table tr th:last-child,
-table tr td:last-child {
+table th:last-child,
+table td:last-child {
     margin-bottom: 0;
 }
 
@@ -479,9 +571,9 @@ header, .context-menu, .megamenu-content, footer{
     color: #b4654d;
 }
 
-.html-for-mac .context-menu {
+/*.html-for-mac {
     --item-hover-bg-color: #E6F0FE;
-}
+}*/
 
 #md-notification .btn {
     border: 0;
@@ -489,6 +581,7 @@ header, .context-menu, .megamenu-content, footer{
 
 .dropdown-menu .divider {
     border-color: #e5e5e5;
+    opacity: 0.4;
 }
 
 .ty-preferences .window-content {
@@ -500,12 +593,17 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
 
-</style>
+
+
+</style><title>index_cn</title>
 </head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name="危夷晨" class="md-header-anchor"></a><strong><span>危夷晨</span></strong></h1><p><img src="./yichen_2014_crop.jpg" alt="drawing" width="300px" align="left"/><span> </span></p><p><br clear="all" /></p><!--- do not know how to resize the image --->
-<!--- ![](https://yichenwei.github.io/yichen_2014_crop.jpg) ---><p><!--- comment ---><span> </span></p><h4><a name="旷视科技上海研究院院长" class="md-header-anchor"></a><strong><span>旷视科技上海研究院院长</span></strong></h4><p><span>电子邮件: weiyichen at megvii.com</span></p><p><span>我于2018年7月加入</span><a href='https://megvii.com/'><span>旷视科技</span></a><span>，任上海研究院院长。在此之前, 我在</span><a href='https://www.msra.cn/'><span>微软亚洲研究院</span></a><span>视觉计算组工作了12年。我于2006年在香港科技大学获得博士学位，于2001年在北京大学获得学士学位。</span></p><p><span>我的研究方向为深度学习和计算机视觉。</span></p><p><span>我的</span><a href='https://scholar.google.com/citations?hl=en&amp;pli=1&amp;user=O7A6nYMAAAAJ'><span>谷歌学术</span></a><span>引用数大概为11,000, h指数为40。</span></p><p><span>我在微软期间的研究工作成功转化到微软的产品，包括</span><a href='https://ieeexplore.ieee.org/document/5742015/'><span>Kinect 身份识别</span></a><span>, </span><a href='https://www.youtube.com/watch?v=1AsoSnOmhvU'><span>Windows Hello</span></a><span>, </span><a href='https://azure.microsoft.com/en-us/services/cognitive-services/'><span>微软认知服务</span></a><span>, 必应, Office, and 微软小冰, 等等。</span></p><h5><a name="上海研究院的工作岗位长期开放研究员工程师实习）" class="md-header-anchor"></a><span>上海研究院的工作岗位长期开放（研究员/工程师/实习）</span></h5><p><span>有意向者请发简历给我，主题为“旷视上海研究院工作申请”或者“旷视上海研究院实习申请”。</span></p><h5><a name="动态" class="md-header-anchor"></a><span>动态</span></h5><ul><li><span>2020年3月, 旷视的深度学习框架</span><a href='https://megengine.org.cn/'><span>MegEngine</span></a><span> (天元) 在</span><a href='https://github.com/MegEngine'><span>GitHub</span></a><span>开源。</span></li><li><span>2019年11月，我在将门创投进行了一个技术</span><a href='https://www.bilibili.com/video/av77388408'><span>宣讲</span></a><span> ，主题为 &quot;不确定性估计在计算机视觉中的应用&quot;。</span></li><li><span>2019年4月，我们关于</span><a href='https://arxiv.org/abs/1904.00420'><span>AutoML</span></a><span>的工作获得一些公众报道（</span><a href='https://mp.weixin.qq.com/s/Dmml7DrujXnOAEhU7vugmw'><span>新智元</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/0_zFoMUh-4s8BKl2rSzmig'><span>机器之心</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/pCsZi7INorI0HN7o5zf1Bw'><span>量子位</span></a><span>, ...）。</span></li><li><span>2019年1月, 我接受了&quot;数据科学50人&quot; 栏目的</span><a href='https://new.qq.com/omn/20190110/20190110A0G9OG.html'><span>采访</span></a><span>。</span></li><li><span>2019年7月，我接受了新智元的</span><a href='https://baijiahao.baidu.com/s?id=1607139006385580393&amp;wfr=spider&amp;for=pc'><span>采访</span></a><span>。</span></li></ul><h5><a name="计算机视觉竞赛获奖" class="md-header-anchor"></a><span>计算机视觉竞赛获奖</span></h5><ul><li><a href='http://cocodataset.org/workshop/coco-mapillary-iccv-2019.html'><span>COCO and Mapillary Challenge 2019</span></a><span>, 1st place in </span><a href='http://cocodataset.org/index.htm#keypoints-2019'><span>keypoint detection</span></a><span> task with </span><a href='https://arxiv.org/abs/1901.00148'><span>Rethinking on Multi-Stage Networks for Human Pose Estimation</span></a></li><li><span>Our </span><a href='https://github.com/JimmySuen/integral-human-pose'><span>integral pose regression method</span></a><span> has won the 2nd place of  </span><a href='http://vision.imar.ro/human3.6m/ranking.php'><span>ECCV 2018 3D Human Pose Estimation Challenge</span></a></li><li><span>Our </span><a href='https://github.com/Microsoft/human-pose-estimation.pytorch'><span>simple baseline method</span></a><span> has won the winner of  </span><a href='https://posetrack.net/workshops/eccv2018/posetrack_eccv_2018_results.html'><span>PoseTrack2018 Multi-person Pose Tracking Challenge</span></a><span> and the 2nd place of  </span><a href='http://cocodataset.org/#keypoints-leaderboard'><span>keypoint detection task of COCO 2018</span></a></li><li><a href='https://places-coco2017.github.io/#winners'><span>COCO Challenge 2017</span></a><span>, 3rd place in object detection task with </span><a href='https://github.com/msracver/Deformable-ConvNets'><span>Deformable Convolutional Networks</span></a><span>.</span></li><li><a href='http://image-net.org/challenges/ilsvrc+coco2016'><span>COCO Challenge 2016</span></a><span>, 1st place in object segmentation task with </span><a href='https://github.com/msracver/FCIS'><span>Fully Convolutional Instance-aware Semantic Segmentation</span></a><span>.</span></li></ul><h5><a name="最近的科研工作" class="md-header-anchor"></a><span>最近的科研工作</span></h5><p><span>Prime-Aware Adaptive Distillation, ECCV 2020 </span><br><span>Youcai Zhang, Zhonghao Lan, Yuchen Dai, Fangao Zeng, Yan Bai, Jie Chang, Yichen Wei </span><br><a href='https://arxiv.org/abs/2008.01458'><span>arXiv version</span></a></p><p><span>Spherical Feature Transform for Deep Metric Learning, ECCV 2020 </span><br><span>Yuke Zhu, Yan Bai, Yichen Wei </span><br><a href='https://arxiv.org/abs/2008.01469'><span>arXiv version</span></a></p><p><span>Angle-based Search Space Shrinking for Neural Architecture SearcSpherical Feature Transform for Deep Metric Learningh, ECCV 2020 </span><br><span>Yiming Hu, Yuding Liang, Zichao Guo, Ruosi Wan, Xiangyu Zhang, Yichen Wei, Qingyi Gu, Jian Sun </span><br><a href='https://arxiv.org/abs/2004.13431'><span>arXiv version</span></a></p><p><span>Single Path One-Shot Neural Architecture Search with Uniform Sampling, ECCV 2020</span><br><span>Zichao Guo, Xiangyu Zhang, Haoyuan Mu, Wen Heng, Zechun Liu, Yichen Wei, Jian sun </span><br><a href='https://arxiv.org/abs/1904.00420'><span>Tech report on arXiv</span></a><br></p><p><a href='https://openreview.net/pdf?id=SkgGjRVKDS'><span>Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization</span></a><span>, ICLR 2020 </span><br><span>Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun </span><br><a href='https://arxiv.org/abs/2001.06838'><span>arXiv version</span></a></p><p><a href='https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization_CVPR_2020_paper.pdf'><span>Circle Loss: A Unified Perspective of Pair Similarity Optimization</span></a><span>, CVPR 2020 (</span><strong><span>Oral</span></strong><span>) </span><br><span>Yifan Sun, Changmao Cheng, Yuhan Zhang, Chi Zhang, Liang Zheng, Zhongdao Wang, Yichen Wei </span><br><a href='https://arxiv.org/abs/2002.10857'><span>arXiv version</span></a></p><p><a href='https://openaccess.thecvf.com/content_CVPR_2020/papers/Chang_Data_Uncertainty_Learning_in_Face_Recognition_CVPR_2020_paper.pdf'><span>Data Uncertainty Learning in Face Recognition</span></a><span>, CVPR 2020</span><br><span>Jie Chang, Zhonghao Lan, Changmao Cheng, Yichen Wei</span><br><a href='https://arxiv.org/abs/2003.11339'><span>arXiv version</span></a></p><p><span>Balanced Alignment for Face Recognition: A Joint Learning Approach</span><br><span>Huawei Wei, Peng Lu, Yichen Wei</span><br><a href='https://arxiv.org/abs/2003.10168'><span>Tech report on arXiv</span></a><span>, March 2020</span></p><p><span>3D Dense Face Alignment via Graph Convolution Networks</span><br><span>Huawei Wei, Shuang Liang, Yichen Wei</span><br><a href='https://arxiv.org/abs/1904.05562'><span>Tech report on arXiv</span></a><span>, April 2019</span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2019/papers/Chu_Vehicle_Re-Identification_With_Viewpoint-Aware_Metric_Learning_ICCV_2019_paper.pdf'><span>Vehicle Re-Identification With Viewpoint-Aware Metric Learning</span></a><span>, ICCV 2019</span><br><span>Ruihang Chu, Yifan Sun, Yadong Li, Zheng Liu, Chi Zhang, Yichen Wei</span><br><a href='https://arxiv.org/abs/1910.04104'><span>arXiv version</span></a></p><p><a href='http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Re-Identification_Supervised_Texture_Generation_CVPR_2019_paper.pdf'><span>Re-Identification Supervised Texture Generation</span></a><span>, CVPR 2019</span><br><span>Jian Wang, Yunshan Zhong, Yachun Li, Chi Zhang, Yichen Wei</span><br><a href='https://arxiv.org/abs/1904.03385'><span>arXiv version</span></a></p><p><span>Rethinking on Multi-Stage Networks for Human Pose Estimation</span><br><span>Wenbo Li, Zhicheng Wang, Binyi Yin, Qixiang Peng, Yuming Du, Tianzi Xiao, Gang Yu, Hongtao Lu, Yichen Wei, Jian Sun</span><br><a href='https://arxiv.org/abs/1901.00148'><span>Tech report on arXiv</span></a><span>, Jan 2019, 1st winner for </span><a href='http://cocodataset.org/index.htm#keypoints-2019'><span>COCO 2019 keypoint detection</span></a></p><p><span>Towards High Performance Video Object Detection for Mobiles  </span><br><span>Xizhou Zhu, Jifeng Dai, Xingchi Zhu, Yichen Wei, Lu Yuan  </span><br><a href='https://arxiv.org/abs/1804.05830'><span>Tech report on arXiv</span></a><span>, April 2018  </span><br></p><p><a href='http://openaccess.thecvf.com/content_ECCV_2018/papers/Bin_Xiao_Simple_Baselines_for_ECCV_2018_paper.pdf'><span>Simple Baselines for Human Pose Estimation and Tracking</span></a><span>, ECCV 2018  </span><br><span>Bin Xiao, Haiping Wu, Yichen Wei </span><br><a href='https://arxiv.org/abs/1804.06208'><span>arXiv version</span></a><span>  </span><br><a href='https://github.com/Microsoft/human-pose-estimation.pytorch'><span>Code</span></a><span>  </span><br></p><p><a href='http://openaccess.thecvf.com/content_ECCV_2018/papers/Jiayuan_Gu_Learning_Region_Features_ECCV_2018_paper.pdf'><span>Learning Region Features for Object Detection</span></a><span>, ECCV 2018 </span><br><span>Jiayuan Gu, Han Hu, Liwei Wang, Yichen Wei, Jifeng Dai </span><br><a href='https://arxiv.org/abs/1803.07066'><span>arXiv version</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiao_Sun_Integral_Human_Pose_ECCV_2018_paper.pdf'><span>Integral Human Pose Regression</span></a><span>, ECCV 2018 </span><br><span>Xiao Sun, Bin Xiao, Shuang Liang, Yichen Wei </span><br><a href='https://arxiv.org/abs/1711.08229'><span>arXiv version</span></a><span> </span><br><a href='https://jimmysuen.github.io/slides/xiaosun_integral_human_pose_regression.pptx'><span>Slides</span></a><span> </span><a href='https://github.com/JimmySuen/integral-human-pose'><span>Code</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_cvpr_2018/papers/Hu_Relation_Networks_for_CVPR_2018_paper.pdf'><span>Relation Networks for Object Detection</span></a><span>, CVPR 2018(</span><strong><span>Oral</span></strong><span>)</span><br><span>Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, Yichen Wei </span><br><a href='https://arxiv.org/abs/1711.11575'><span>arXiv version</span></a><span>  </span><br><a href='https://github.com/msracver/Relation-Networks-for-Object-Detection'><span>Code</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_Towards_High_Performance_CVPR_2018_paper.pdf'><span>Towards High Performance Video Object Detection</span></a><span>, CVPR 2018 (</span><strong><span>Spotlight</span></strong><span>) </span><br><span>Xizhou Zhu, Jifeng Dai, Lu Yuan, Yichen Wei </span><br><a href='https://arxiv.org/abs/1711.11577'><span>arXiv version</span></a><span>  </span><br></p><p><a href='(http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf)'><span>Pseudo-Mask Augmented Object Detection</span></a><span>, CVPR 2018 </span><br><span>Xiangyun Zhao, Shuang Liang, Yichen Wei </span><br><a href='https://arxiv.org/abs/1803.05858'><span>arXiv version</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf'><span>Deformable Convolutional Networks</span></a><span>, ICCV 2017 (</span><strong><span>Oral</span></strong><span>)</span>
-<span>Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, and Yichen Wei </span><br><a href='https://arxiv.org/abs/1703.06211'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/Deformable-ConvNets'><span>Code</span></a><span>  </span><a href='http://www.jifengdai.org/slides/Deformable_Convolutional_Networks_Oral.pdf'><span>Slides</span></a><span>  </span><a href='http://presentations.cocodataset.org/COCO17-Detect-MSRA.pdf'><span>COCO 2017 workshop</span></a><span>  </span><a href='https://github.com/felixlaumon/deform-conv'><span>A third party demon on MNIST</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Flow-Guided_Feature_Aggregation_ICCV_2017_paper.pdf'><span>Flow-Guided Feature Aggregation for Video Object Detection</span></a><span>, ICCV 2017</span><br><span>Xizhou Zhu, Yujie Wang, Jifeng Dai, Lu Yuan, Yichen Wei </span><br><a href='https://arxiv.org/abs/1703.10025'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/Flow-Guided-Feature-Aggregation'><span>Code</span></a><span>  </span><a href='https://www.youtube.com/watch?v=R2h3DbTPvVg'><span>Video</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Sun_Compositional_Human_Pose_ICCV_2017_paper.pdf'><span>Compositional Human Pose Regression</span></a><span>, ICCV 2017 </span><br><span>Xiao Sun, Jiaxiang Shang, Shuang Liang, Yichen Wei </span><br><a href='https://arxiv.org/abs/1704.00159'><span>arXiv version</span></a><span> </span><br><a href='https://jimmysuen.github.io/slides/xiaosun_compositional_pose.pptx'><span>Slides</span></a><span> </span><a href='https://www.youtube.com/watch?v=c-hgHqVK90M'><span>Video</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhou_Towards_3D_Human_ICCV_2017_paper.pdf'><span>Towards 3D Human Pose Estimation in the Wild: A Weakly-Supervised Approach</span></a><span>, ICCV 2017 </span><br><span>Xingyi Zhou, Qixing Huang, Xiao Sun, Xiangyang Xue, Yichen Wei </span><br><a href='https://arxiv.org/abs/1704.02447'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/xingyizhou/pose-hg-3d'><span>Code</span></a><span> </span><br></p><p><a href='https://zpascal.net/cvpr2017/Zhu_Deep_Feature_Flow_CVPR_2017_paper.pdf'><span>Deep Feature Flow for Video Recognition</span></a><span>, CVPR 2017 </span><br><span>Xizhou Zhu, Yuwen Xiong, Jifeng Dai, Lu Yuan, Yichen Wei </span><br><a href='https://arxiv.org/abs/1611.07715'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/Flow-Guided-Feature-Aggregation'><span>Code</span></a><span>  </span><a href='https://www.youtube.com/watch?v=R2h3DbTPvVg'><span>Video</span></a><span> </span><br></p><p><a href='https://www.zpascal.net/cvpr2017/Li_Fully_Convolutional_Instance-Aware_CVPR_2017_paper.pdf'><span>Fully Convolutional Instance-aware Semantic Segmentation</span></a><span>, CVPR 2017 (</span><strong><span>Spotlight</span></strong><span>)</span><br><span>Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji, Yichen Wei </span><br><a href='https://arxiv.org/abs/1611.07709'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/FCIS'><span>Code</span></a><span> </span><br></p><h5><a name="早期的科研工作publicationshtml" class="md-header-anchor"></a><a href='publications.html'><span>早期的科研工作</span></a></h5><p><span>最近修改于: 2020年9月2日</span></p></div>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='危夷晨'><strong><span>危夷晨</span></strong></h1><p><img src="./yichen_2014_crop.jpg" alt="drawing" width="300px" align="left"/><span> </span></p><p><br clear="all" /></p><!--- do not know how to resize the image --->
+<!--- ![](https://yichenwei.github.io/yichen_2014_crop.jpg) ---><p><!--- comment ---><span> </span></p><h4 id='旷视科技上海研究院院长'><strong><span>旷视科技上海研究院院长</span></strong></h4><p><span>switch to </span><a href='index.html'><span>English homepage</span></a><span>。</span></p><p><span>电子邮件: weiyichen at megvii.com</span></p><p><span>我于2018年7月加入</span><a href='https://megvii.com/'><span>旷视科技</span></a><span>，任上海研究院院长。在此之前, 我在</span><a href='https://www.msra.cn/'><span>微软亚洲研究院</span></a><span>视觉计算组工作了12年。我于2006年在香港科技大学获得博士学位，于2001年在北京大学获得学士学位。</span></p><p><span>我的研究方向为深度学习和计算机视觉。</span></p><p><span>我的</span><a href='https://scholar.google.com/citations?hl=en&amp;pli=1&amp;user=O7A6nYMAAAAJ'><span>谷歌学术</span></a><span>引用数约为15,000, h指数为42。</span></p><p><span>我在微软期间的研究工作成功转化到微软的产品，包括</span><a href='https://ieeexplore.ieee.org/document/5742015/'><span>Kinect 身份识别</span></a><span>, </span><a href='https://www.youtube.com/watch?v=1AsoSnOmhvU'><span>Windows Hello</span></a><span>, </span><a href='https://azure.microsoft.com/en-us/services/cognitive-services/'><span>微软认知服务</span></a><span>, 必应, Office, and 微软小冰, 等等。</span></p><h5 id='上海研究院的工作岗位长期开放研究员工程师实习）'><span>上海研究院的工作岗位长期开放（研究员/工程师/实习）</span></h5><p><span>有意向者请发简历给我，主题为“旷视上海研究院工作申请”或者“旷视上海研究院实习申请”。</span></p><h5 id='动态'><span>动态</span></h5><ul><li><span>2020年3月, 旷视的深度学习框架</span><a href='https://megengine.org.cn/'><span>MegEngine</span></a><span> (天元) 在</span><a href='https://github.com/MegEngine'><span>GitHub</span></a><span>开源。</span></li><li><span>2019年11月，我在将门创投进行了一个技术</span><a href='https://www.bilibili.com/video/av77388408'><span>宣讲</span></a><span> ，主题为 &quot;不确定性估计在计算机视觉中的应用&quot;。</span></li><li><span>2019年4月，我们关于</span><a href='https://arxiv.org/abs/1904.00420'><span>AutoML</span></a><span>的工作获得一些公众报道（</span><a href='https://mp.weixin.qq.com/s/Dmml7DrujXnOAEhU7vugmw'><span>新智元</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/0_zFoMUh-4s8BKl2rSzmig'><span>机器之心</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/pCsZi7INorI0HN7o5zf1Bw'><span>量子位</span></a><span>, ...）。</span></li><li><span>2019年1月, 我接受了&quot;数据科学50人&quot; 栏目的</span><a href='https://new.qq.com/omn/20190110/20190110A0G9OG.html'><span>采访</span></a><span>。</span></li><li><span>2019年7月，我接受了新智元的</span><a href='https://baijiahao.baidu.com/s?id=1607139006385580393&amp;wfr=spider&amp;for=pc'><span>采访</span></a><span>。</span></li></ul><h5 id='计算机视觉竞赛获奖'><span>计算机视觉竞赛获奖</span></h5><ul><li><a href='http://cocodataset.org/workshop/coco-mapillary-iccv-2019.html'><span>COCO and Mapillary Challenge 2019</span></a><span>, 1st place in </span><a href='http://cocodataset.org/index.htm#keypoints-2019'><span>keypoint detection</span></a><span> task with </span><a href='https://arxiv.org/abs/1901.00148'><span>Rethinking on Multi-Stage Networks for Human Pose Estimation</span></a></li><li><span>Our </span><a href='https://github.com/JimmySuen/integral-human-pose'><span>integral pose regression method</span></a><span> has won the 2nd place of  </span><a href='http://vision.imar.ro/human3.6m/ranking.php'><span>ECCV 2018 3D Human Pose Estimation Challenge</span></a></li><li><span>Our </span><a href='https://github.com/Microsoft/human-pose-estimation.pytorch'><span>simple baseline method</span></a><span> has won the winner of  </span><a href='https://posetrack.net/workshops/eccv2018/posetrack_eccv_2018_results.html'><span>PoseTrack2018 Multi-person Pose Tracking Challenge</span></a><span> and the 2nd place of  </span><a href='http://cocodataset.org/#keypoints-leaderboard'><span>keypoint detection task of COCO 2018</span></a></li><li><a href='https://places-coco2017.github.io/#winners'><span>COCO Challenge 2017</span></a><span>, 3rd place in object detection task with </span><a href='https://github.com/msracver/Deformable-ConvNets'><span>Deformable Convolutional Networks</span></a><span>.</span></li><li><a href='http://image-net.org/challenges/ilsvrc+coco2016'><span>COCO Challenge 2016</span></a><span>, 1st place in object segmentation task with </span><a href='https://github.com/msracver/FCIS'><span>Fully Convolutional Instance-aware Semantic Segmentation</span></a><span>.</span></li></ul><h5 id='发表论文'><a href='publications.html'><span>发表论文</span></a></h5><p><span>最近修改于: 2021年6月16日</span></p></div></div>
 </body>
 </html>

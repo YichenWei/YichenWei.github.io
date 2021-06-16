@@ -2,32 +2,39 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>publications</title><link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; }
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
-.first-line-indent #write p .md-line { text-indent: 0px; }
-.first-line-indent #write li, .first-line-indent #write p, .first-line-indent #write p .md-line:first-child { text-indent: 2em; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
-#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
-#write li > figure:first-child { margin-top: -20px; }
+#write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
@@ -35,9 +42,7 @@ h3 { font-size: 1.6rem; }
 h4 { font-size: 1.4rem; }
 h5 { font-size: 1.2rem; }
 h6 { font-size: 1rem; }
-h1, h2, h3, h4, h5, h6 { margin-top: 1rem; margin-bottom: 1rem; }
-p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
-.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
@@ -45,66 +50,71 @@ sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); 
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
+figure > table { margin: 0px; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 80px; }
+table.md-table td { min-width: 32px; }
 .CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
 .CodeMirror-lines { padding: 0px; }
 div.hr:focus { cursor: none; }
-pre { white-space: pre-wrap; }
-pre.contain-cm { white-space: normal; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
 .md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-.md-fences.mock-cm { white-space: pre-wrap; }
-.show-fences-line-number .md-fences { padding-left: 0px; }
-.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
-.CodeMirror-line { break-inside: avoid; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-.footnote-line { white-space: pre-wrap; }
+#write .footnote-line { white-space: pre-wrap; }
 @media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
-  #write { margin-top: 0px; border-color: transparent !important; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
-  @page { margin: 20mm 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
 pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > img:only-child { display: block; margin: auto; }
-.md-line > .md-image:only-child, p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
-.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
-p + .mathjax-block { margin-top: -1.143rem; }
-.mathjax-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
 .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
 .md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { }
+.md-toc-inner:hover { text-decoration: underline; }
 .md-toc-inner { display: inline-block; cursor: pointer; }
 .md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
 .md-toc-h2 .md-toc-inner { margin-left: 2em; }
@@ -122,227 +132,586 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .footnote-line a:not(.reversefootnote) { color: inherit; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
-code, pre, tt { font-family: var(--monospace); }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
-.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 
 
-@font-face { font-family: "PT Serif"; font-style: normal; font-weight: normal; src: local("PT Serif"), local("PTSerif-Regular"), url("./newsprint/PT_Serif-Web-Regular.ttf"); }
-@font-face { font-family: "PT Serif"; font-style: italic; font-weight: normal; src: local("PT Serif"), local("PTSerif-Italic"), url("./newsprint/PT_Serif-Web-Italic.ttf"); }
-@font-face { font-family: "PT Serif"; font-style: normal; font-weight: bold; src: local("PT Serif"), local("PTSerif-Bold"), url("./newsprint/PT_Serif-Web-Bold.ttf"); }
-@font-face { font-family: "PT Serif"; font-style: italic; font-weight: bold; src: local("PT Serif"), local("PTSerif-BoldItalic"), url("./newsprint/PT_Serif-Web-BoldItalic.ttf"); }
-:root { --active-file-bg-color: rgba(32, 43, 51, 0.63); --active-file-text-color: white; --bg-color: #f3f2ee; --text-color: #1f0909; --select-text-bg-color: rgba(32, 43, 51, 0.63); --select-text-font-color: white; }
-pre { --select-text-bg-color: #36284e; --select-text-font-color: #fff; }
-html { font-size: 16px; }
-html, body { background-color: rgb(243, 242, 238); font-family: "PT Serif", "Times New Roman", Times; color: rgb(31, 9, 9); line-height: 1.5em; }
-#write { max-width: 40em; }
-ol, ul { list-style: none; }
-blockquote, q { quotes: none; }
-blockquote::before, blockquote::after, q::before, q::after { content: none; }
-table { border-collapse: collapse; border-spacing: 0px; }
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-h1 { font-size: 1.875em; line-height: 1.6em; margin-top: 2em; }
-h2, h3 { font-size: 1.3125em; line-height: 1.15; margin-top: 2.28571em; margin-bottom: 1.15em; }
-h3 { font-weight: normal; }
-h4 { font-size: 1.125em; margin-top: 2.67em; }
-h5, h6 { font-size: 1em; }
-h1 { border-bottom: 1px solid; margin-bottom: 1.875em; padding-bottom: 0.8125em; }
-a { text-decoration: none; color: rgb(6, 85, 136); }
-a:hover, a:active { text-decoration: underline; }
-p, blockquote, .md-fences { margin-bottom: 1.5em; }
-h1, h2, h3, h4, h5, h6 { margin-bottom: 1.5em; }
-blockquote { font-style: italic; border-left: 5px solid; margin-left: 2em; padding-left: 1em; }
-ul, ol { margin: 0px 0px 1.5em 1.5em; }
-ol li { list-style-type: decimal; list-style-position: outside; }
-ul li { list-style-type: disc; list-style-position: outside; }
-.md-meta, .md-before, .md-after { color: rgb(153, 153, 153); }
-table { margin-bottom: 1.5em; font-size: 1em; }
-thead th, tfoot th { padding: 0.25em 0.25em 0.25em 0.4em; text-transform: uppercase; }
-th { text-align: left; }
-td { vertical-align: top; padding: 0.25em 0.25em 0.25em 0.4em; }
-code, .md-fences { background-color: rgb(218, 218, 218); padding-left: 1ch; padding-right: 1ch; }
-.md-fences { margin-left: 2em; margin-bottom: 3em; }
-pre, code, tt { font-size: 0.875em; line-height: 1.71429em; }
-h1 { line-height: 1.3em; font-weight: normal; margin-bottom: 0.5em; }
-p + ul, p + ol { margin-top: -1em; }
-h3 + ul, h4 + ul, h5 + ul, h6 + ul, h3 + ol, h4 + ol, h5 + ol, h6 + ol { margin-top: 0.5em; }
-li > ul, li > ol { margin-top: inherit; }
-h2, h3 { margin-bottom: 0.75em; }
-hr { border-top: none; border-right: none; border-bottom: 1px solid; border-left: none; }
-h1 { border-color: rgb(197, 197, 197); }
-blockquote { border-color: rgb(186, 186, 186); color: rgb(101, 101, 101); }
-.ty-table-edit { background-color: transparent; }
-thead { background-color: rgb(218, 218, 218); }
-tr:nth-child(2n) { background: rgb(232, 231, 231); }
-hr { border-color: rgb(197, 197, 197); }
-.task-list { padding-left: 1rem; }
-.md-task-list-item { padding-left: 1.5rem; list-style-type: none; }
-.md-task-list-item > input::before { content: "√"; display: inline-block; width: 1.25rem; height: 1.6rem; vertical-align: middle; text-align: center; color: rgb(221, 221, 221); background-color: rgb(243, 242, 238); }
-.md-task-list-item > input:checked::before, .md-task-list-item > input[checked]::before { color: inherit; }
-#write pre.md-meta-block { min-height: 1.875rem; color: rgb(85, 85, 85); border: 0px; background: transparent; margin-left: 1em; margin-top: 1em; }
-.md-image > .md-meta { color: rgb(155, 81, 70); }
-.md-image > .md-meta { font-family: Menlo, "Ubuntu Mono", Consolas, "Courier New", "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif; }
-#write > h3.md-focus::before { left: -1.5rem; color: rgb(153, 153, 153); border-color: rgb(153, 153, 153); }
-#write > h4.md-focus::before { left: -1.5rem; top: 0.25rem; color: rgb(153, 153, 153); border-color: rgb(153, 153, 153); }
-#write > h5.md-focus::before { left: -1.5rem; color: rgb(153, 153, 153); border-color: rgb(153, 153, 153); }
-#write > h6.md-focus::before { left: -1.5rem; top: 0.3125rem; color: rgb(153, 153, 153); border-color: rgb(153, 153, 153); }
-.md-toc:focus .md-toc-content { margin-top: 19px; }
-.md-toc-content:empty::before { color: rgb(6, 85, 136); }
-.md-toc-item { color: rgb(6, 85, 136); }
-#write div.md-toc-tooltip { background-color: rgb(243, 242, 238); }
-#typora-sidebar { background-color: rgb(243, 242, 238); box-shadow: rgba(0, 0, 0, 0.376) 0px 6px 12px; }
-.pin-outline #typora-sidebar { background: inherit; box-shadow: none; border-right: 1px dashed; }
-.pin-outline #typora-sidebar:hover .outline-title-wrapper { border-left: 1px dashed; }
-.outline-item:hover { background-color: rgb(218, 218, 218); border-left: 28px solid rgb(218, 218, 218); border-right: 18px solid rgb(218, 218, 218); }
-.typora-node .outline-item:hover { border-right: 28px solid rgb(218, 218, 218); }
-.outline-expander::before { content: ""; font-family: FontAwesome; font-size: 14px; top: 1px; }
-.outline-expander:hover::before, .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-.modal-content { background-color: rgb(243, 242, 238); }
-.auto-suggest-container ul li { list-style-type: none; }
-.megamenu-menu, #top-titlebar, #top-titlebar *, .megamenu-content { background: rgb(243, 242, 238); color: rgb(31, 9, 9); }
-.megamenu-menu-header { border-bottom: 1px dashed rgb(32, 43, 51); }
-.megamenu-menu { box-shadow: none; border-right: 1px dashed; }
-header, .context-menu, .megamenu-content, footer { font-family: "PT Serif", "Times New Roman", Times; color: rgb(31, 9, 9); }
-#megamenu-back-btn { color: rgb(31, 9, 9); border-color: rgb(31, 9, 9); }
-.megamenu-menu-header #megamenu-menu-header-title::before { color: rgb(31, 9, 9); }
-.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active { color: inherit; background-color: rgb(232, 231, 223); }
-.long-btn:hover { background-color: rgb(232, 231, 223); }
-#recent-file-panel tbody tr:nth-child(2n-1) { background-color: transparent !important; }
-.megamenu-menu-panel tbody tr:hover td:nth-child(2) { color: inherit; }
-.megamenu-menu-panel .btn { background-color: rgb(210, 209, 209); }
-.btn-default { background-color: transparent; }
-.typora-sourceview-on #toggle-sourceview-btn, .show-word-count #footer-word-count { background: rgb(199, 197, 197); }
-#typora-quick-open { background-color: inherit; }
-.md-diagram-panel { margin-left: -1ch; margin-top: 24px; }
-.file-list-item-file-name { font-weight: initial; }
-.file-list-item-summary { opacity: 1; }
-.file-list-item { color: rgb(119, 119, 119); }
-.file-list-item.active { background-color: inherit; color: black; }
-.ty-side-sort-btn.active { background-color: inherit; }
-.file-list-item.active .file-list-item-file-name { font-weight: bold; }
-.file-list-item { opacity: 1 !important; }
-.file-library-node.active > .file-node-background { background-color: var(--active-file-bg-color); }
-.file-tree-node.active > .file-node-content { color: var(--active-file-text-color); }
-.md-task-list-item > input { margin-left: -1.6em; margin-top: calc(1rem - 12px); }
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
 
 
 
-
-
- .typora-export p, .typora-export .footnote-line {white-space: normal;} 
-</style>
+</style><title>publications</title>
 </head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h4><a name='header-n0' class='md-header-anchor '></a>Conference Papers</h4><p><a href='https://arxiv.org/abs/1609.05317'>Deep Kinematic Pose Regression</a> <br />
-Xingyi Zhou, Xiao Sun, Wei Zhang, Shuang Liang, <em>Yichen Wei</em> <br />
-ECCV Workshop on Geometry Meets Deep Learning, 2016 <br />
-<img src="publications\ECCV16_DeepKinematicPoseRegression.JPG" alt="drawing" width="600px" align="left"/> <br clear="all" /></p><p><a href='https://arxiv.org/abs/1607.01437'>Attribute Recognition from Adaptive Parts</a> <br />
-Luwei Yang, Ligeng Zhu, <em>Yichen Wei</em>, Shuang Liang, Ping Tan <br />
-BMVC 2016 <br />
-<img src="publications\BMVC16_AttributeFromAdaptiveParts.JPG" alt="drawing" width="600px" align="left"/> <br clear="all" /></p><p><a href='publications/IJCAI16_DeepHandModel.pdf'>Model-based Deep Hand Pose Estimation</a> <br />
-Xingyi Zhou, Qingfu Wan, Wei Zhang, Xiangyang Xue, <em>Yichen Wei</em> <br />
-IJCAI 2016 <br />
-<a href='https://github.com/xingyizhou/DeepModel'>Code</a> <br />
-<img src="publications\IJCAI16_DeepHandModel.JPG" alt="drawing" width="600px" align="left"/> <br clear="all" /></p><p><a href='publications/CHI15_AccurateRobustFlexible.pdf'>Accurate, Robust, and Flexible Real-time Hand Tracking</a> <br />Toby Sharp, Cem Keskin, Duncan Robertson, Jon Taylor, Jamie Shotton, David Kim, Christoph Rhemann, Ido Leichter, Alon Vinnikov, <em>Yichen Wei</em>, Danie Freedman, Pushmeet Kohli, Eyal Krupka, Andrew Fitzgibbon, Shahram Izadi <br />CHI 2015 <br /><a href='https://www.youtube.com/watch?v=RQ-kAoaNc60'>Video</a> <br />
-<img src="publications\CHI15_AccurateRobustFlexible.JPG" alt="drawing" width="600px" align="left"/> <br clear="all" /></p><p><a href='publications/CVPR15_HandPoseRegression.pdf'>Cascaded Hand Pose Regression</a> <br \>
-Xiao Sun, <em>Yichen Wei</em>, Shuang Liang, Xiaoou Tang, Jian Sun <br \> 
-CVPR 2015 <br \>
-<a href='https://www.dropbox.com/s/c91xvevra867m6t/cvpr15_MSRAHandGestureDB.zip?dl=0'>Dataset</a> <a href='https://jimmysuen.github.io/txt/cvpr15_MSRAHandGestureDB_readme.txt'>Readme</a> <br \>
-<a href='https://www.youtube.com/watch?v=6Zc5vU_9uUA'>Video</a> <br \>
-<img src="publications\CVPR15_HandPoseRegression.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR15_MultiBranchProposal.pdf'>Object Proposal by Multi-branch Hierarchical Segmentation</a> <br \>
-Chaoyang Wang, Long Zhao, Shuang Liang, Liqing Zhang, Jinyuan Jia, <em>Yichen Wei</em> <br \> 
-CVPR 2015 <br \>
-<img src="publications\CVPR15_MultiBranchProposal.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR15_RefineRandomForest.pdf'>Global Refinement of Random Forest</a> <br \>
-Shaoqing Ren, Xudong Cao, <em>Yichen Wei</em>, Jian Sun <br \>
-CVPR 2015 <br \>
-<img src="publications\CVPR15_RefineRandomForest.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/ACCV14_SaliencyBaseline.pdf'>Size and Location Matter: a New Baseline for Salient Object Detection</a> <br \>
-Long Zhao, Shuang Liang, <em>Yichen Wei</em>, Jinyuan Jia <br \>
-ACCV 2014 <br \>
-<img src="publications\ACCV14_SaliencyBaseline.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/ECCV14_JointDetectAlign.pdf'>Joint Cascade Face Detection and Alignment</a> <br />
-Dong Chen, Shaoqing Ren, <em>Yichen Wei</em>, Xudong Cao, Jian Sun <br />
-ECCV 2014 <br />
-<img src="publications\ECCV14_JointDetectAlign.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR14_FaceAlignment.pdf'>Face Alignment at 3000 FPS by Regressing Local Binary Features</a> <br />
-Shaoqing Ren, Xudong Cao, <em>Yichen Wei</em>, Jian Sun <br />
-CVPR 2014 (<strong>Oral</strong>) <br />
-<a href='https://www.youtube.com/watch?v=TOVFOYrXdIQ'>Video</a> <br />
-<img src="publications\CVPR14_FaceAlignment.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR14_HandTracking.pdf'>Realtime and Robust Hand Tracking from Depth</a> <br />
-Chen Qian, Xiao Sun, <em>Yichen Wei</em>, Xiaoou Tang, Jian Sun <br />
-CVPR 2014 (<strong>Oral</strong>) <br />
-<a href='https://www.dropbox.com/s/t91imizfdaf4i5l/cvpr14_MSRAHandTrackingDB.zip?dl=0'>Dataset</a> <a href='https://jimmysuen.github.io/txt/cvpr14_MSRAHandTrackingDB_readme.txt'>Readme</a> <br />
-<a href='https://www.youtube.com/watch?v=lJ0a0ndezFU'>Video</a> <br />
-<img src="publications\CVPR14_HandTracking.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR14_SaliencyOptimization.pdf'>Saliency Optimization from Robust Background Detection</a> <br />
-Wangjiang Zhu, Shuang Liang, <em>Yichen Wei</em>, Jian Sun <br />
-CVPR 2014 <br />
-<a href='publications/cvpr14_saliency_code.zip'>Code</a> <br />
-<img src="publications\CVPR14_SaliencyOptimization.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/ICCV13_WeightedMedianFiltering.pdf'>Constant Time Weighted Median Filtering for Stereo Matching and Beyond</a> <br />
-Ziyang Ma, Kaiming He, <em>Yichen Wei</em>, Jian Sun, Enhua Wu <br />
-ICCV 2013 <br />
-<img src="publications\ICCV13_WeightedMedianFiltering.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/ECCV12_GeodesicSaliency.pdf'>Geodesic Saliency Using Background Priors</a> <br />
-<em>Yichen Wei</em>, Fang Wen, Wangjiang Zhu, Jian Sun <br />
-ECCV 2012 <br />
-<a href='publications/ECCV12_GeodesicSaliency.pptx'>Slides</a> <a href='publications/cvpr14_saliency_code.zip'>Code</a> <br />
-<img src="publications\ECCV12_GeodesicSaliency.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR12_FaceAlignment.pdf'>Face Alignment by Explicit Shape Regression</a> <br />
-Xudong Cao, <em>Yichen Wei</em>, Fang Wen, Jian Sun <br />
-CVPR 2012 (<strong>Oral</strong>) <br />
-<a href='publications/CVPR12_FaceAlignment.pptx'>Slides</a> <a href='publications/CVPR12_FaceAlignment.wmv'>Video</a> <br/ >
-<img src="publications\CVPR12_FaceAlignment.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR12_MultipleClassLearning.pdf'>Unsupervised Object Class Discovery via Saliency-Guided Multiple Class Learning</a> <br />
-Jun-Yan Zhu, Jiajun Wu, <em>Yichen Wei</em>, Eric Chang, Zhuowen Tu <br />
-CVPR 2012 <br />
-<img src="publications\CVPR12_MultipleClassLearning.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/ICCV11_SalientObjectDetection.pdf'>Salient Object Detection by Composition</a> <br />
-Jie Feng, <em>Yichen Wei</em>, Litian Tao, Chao Zhang, Jian Sun <br />
-ICCV 2011 <br />
-<img src="publications\ICCV11_SalientObjectDetection.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR10_PhotometricStereo.pdf'>Self-calibrating Photometric Stereo</a> <br />
-Boxin Shi, Yasuyuki Matsushita, <em>Yichen Wei</em>, Chao Xu, Ping Tan <br />
-CVPR 2010 <br />
-<img src="publications\CVPR10_PhotometricStereo.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/ICCV07_InteractiveTracking.pdf'>Interactive Offline Tracking for Color Objects</a> <br />
-<em>Yichen Wei</em>, Jian Sun, Xiaoou Tang, Heung-Yeung Shum <br />
-ICCV 2007 <br />
-<img src="publications\ICCV07_InteractiveTracking.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/SBIM07_HairSketching.pdf'>Sketching Hairstyles</a> <br />
-Hongbo Fu, <em>Yichen Wei</em>, Chiew-Lan Tai, Long Quan <br />
-EUROGRPHICS Workshop on Sketch-Based Interfaces and Modeling, 2007 <br />
-<img src="publications\SBIM07_HairSketching.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR05_AsymmetricalStereo.pdf'>Asymmetrical Occlusion Handling Using Graph Cut for Multi-View Stereo</a> <br />
-<em>Yichen Wei</em> and Long Quan <br />
-CVPR 2005 <br />
-<img src="publications\CVPR05_AsymmetricalStereo.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/CVPR04_ProgressiveStereo.pdf'>Region-Based Progressive Stereo Matching</a> <br />
-<em>Yichen Wei</em> and Long Quan <br />
-CVPR 2004 <br />
-<img src="publications\CVPR04_ProgressiveStereo.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/ACCV04_CircularMotion.pdf'>Construction and Rendering of Concentric Mosaics from a Handheld Camera</a> <br />
-Guang Jiang, <em>Yichen Wei</em>, Hung-Tat TSUI, Long Quan <br />
-ACCV 2004 <br /></p><p><a href='publications/ACCV04_Stereo.pdf'>Fast Segmentation-Based Dense Stereo from Quisai-Dense Matching</a> <br />
-<em>Yichen Wei</em>, Maxime Lhuillier and Long Quan <br />
-ACCV 2004 <br />
-<img src="publications\ACCV04_Stereo.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><h4><a name='header-n128' class='md-header-anchor '></a>Journal Papers</h4><p>Face alignment via regressing local binary features <br />
-Shaoqing Ren, Xudong Cao, <em>Yichen Wei</em>, Jian Sun <br />
-IEEE Transactions on Image Processing, 2016 <br /></p><p><a href='publications/PAMI15_SketchMatching.pdf'>Sketch Matching on Topology Product Graph</a> <br />
-Shuang Liang, Jun Luo, Wenyin Liu, <em>Yichen Wei</em> <br />
-TPAMI 2015 <br />
-<img src="publications\PAMI15_SketchMatching.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p>Face Alignment by Explicit Shape Regression <br />
-Xudong Cao, <em>Yichen Wei</em>, Fang Wen, Jian Sun <br />
-IJCV 2014 <br /></p><p><a href='publications/IEEEComputer11_KinectIdentity.pdf'>Kinect Identity: Technology and Experience</a> <br />
-Tommer Leyvand, Casey Meekhof, <em>Yichen Wei</em>, Jian Sun, Baining Guo <br />
-IEEE Computer, 2011 <br />
-<img src="publications\IEEEComputer11_KinectIdentity.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/SIGGRAPH05_HairModeling.pdf'>Modeling Hair from Multiple Views</a> <br />
-<em>Yichen Wei</em>, Eyal Ofek, Long Quan, Heung-Yeung Shum <br />
-Siggraph 2005 <br />
-<img src="publications\SIGGRAPH05_HairModeling.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/PAMI05_CircularMotion.pdf'>Outward-Looking Circular Motion Analysis of Large Image Sequences</a> <br />
-Guang Jiang, <em>Yichen Wei</em>, Long Quan, Hung-Tat Tsui, Heung-Yeung Shum <br />
-TPAMI 2005 <br />
-<img src="publications\PAMI05_CircularMotion.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications/IVC04_PlanarMotion.pdf'>Constrained planar motion analysis by decomposition</a> <br />
-Long Quan, <em>Yichen Wei</em>, Le Lu, Heung-Yeung Shum <br />
-Image and Vision Computing, 2004 <br />
-<img src="publications\IVC04_PlanarMotion.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p></div>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h4 id='recent-publications-since-2017'><span>Recent Publications (since 2017)</span></h4><p><span>SOLQ: Segmenting Objects by Learning Queries</span>
+<span>Bin Dong, Fangao Zeng, Tiancai Wang, Xiangyu Zhang, Yichen Wei</span>
+<a href='https://arxiv.org/abs/2106.02351'><span>Tech report on arXiv</span></a><span>, 2021</span></p><p><span>MOTR: End-to-End Multiple-Object Tracking with TRansformer</span>
+<span>Fangao Zeng, Bin Dong, Tiancai Wang, Cheng Chen, Xiangyu Zhang, Yichen Wei</span>
+<a href='https://arxiv.org/abs/2105.03247'><span>Tech report on arXiv</span></a><span>, 2021</span></p><p><a href='https://openaccess.thecvf.com/content/CVPR2021/papers/Zou_End-to-End_Human_Object_Interaction_Detection_With_HOI_Transformer_CVPR_2021_paper.pdf'><span>End-to-End Human Object Interaction Detection with HOI Transformer</span></a><span>, CVPR 2021</span>
+<span>Cheng Zou, Bohan Wang, Yue Hu, Junqi Liu, Qian Wu, Yu Zhao, Boxun Li, Chenguang Zhang, Chi Zhang, Yichen Wei, Jian Sun</span>
+<a href='https://arxiv.org/abs/2103.04503'><span>arXiv version</span></a></p><p><a href='https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Dynamic_Metric_Learning_Towards_a_Scalable_Metric_Space_To_Accommodate_CVPR_2021_paper.html'><span>Dynamic Metric Learning: Towards a Scalable Metric Space To Accommodate Multiple Semantic Scales</span></a><span>, CVPR 2021</span>
+<span>Yifan Sun, Yuke Zhu, Yuhan Zhang, Pengkun Zheng, Xi Qiu, Chi Zhang, Yichen Wei</span>
+<a href='https://arxiv.org/abs/2103.11781'><span>arXiv version</span></a></p><p><a href='https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640647.pdf'><span>Prime-Aware Adaptive Distillation</span></a><span>, ECCV 2020 </span><br><span>Youcai Zhang, Zhonghao Lan, Yuchen Dai, Fangao Zeng, Yan Bai, Jie Chang, Yichen Wei </span><br><a href='https://arxiv.org/abs/2008.01458'><span>arXiv version</span></a></p><p><a href='https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640409.pdf'><span>Spherical Feature Transform for Deep Metric Learning</span></a><span>, ECCV 2020 </span><br><span>Yuke Zhu, Yan Bai, Yichen Wei </span><br><a href='https://arxiv.org/abs/2008.01469'><span>arXiv version</span></a></p><p><a href='https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640120.pdf'><span>Angle-based Search Space Shrinking for Neural Architecture SearcSpherical Feature Transform for Deep Metric Learning</span></a><span>, ECCV 2020 </span><br><span>Yiming Hu, Yuding Liang, Zichao Guo, Ruosi Wan, Xiangyu Zhang, Yichen Wei, Qingyi Gu, Jian Sun </span><br><a href='https://arxiv.org/abs/2004.13431'><span>arXiv version</span></a></p><p><a href='https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123610528.pdf'><span>Single Path One-Shot Neural Architecture Search with Uniform Sampling</span></a><span>, ECCV 2020</span><br><span>Zichao Guo, Xiangyu Zhang, Haoyuan Mu, Wen Heng, Zechun Liu, Yichen Wei, Jian sun </span><br><a href='https://arxiv.org/abs/1904.00420'><span>arXiv version</span></a><br></p><p><a href='https://openreview.net/pdf?id=SkgGjRVKDS'><span>Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization</span></a><span>, ICLR 2020 </span><br><span>Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun </span><br><a href='https://arxiv.org/abs/2001.06838'><span>arXiv version</span></a></p><p><a href='https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization_CVPR_2020_paper.pdf'><span>Circle Loss: A Unified Perspective of Pair Similarity Optimization</span></a><span>, CVPR 2020 (</span><strong><span>Oral</span></strong><span>) </span><br><span>Yifan Sun, Changmao Cheng, Yuhan Zhang, Chi Zhang, Liang Zheng, Zhongdao Wang, Yichen Wei </span><br><a href='https://arxiv.org/abs/2002.10857'><span>arXiv version</span></a></p><p><a href='https://openaccess.thecvf.com/content_CVPR_2020/papers/Chang_Data_Uncertainty_Learning_in_Face_Recognition_CVPR_2020_paper.pdf'><span>Data Uncertainty Learning in Face Recognition</span></a><span>, CVPR 2020</span><br><span>Jie Chang, Zhonghao Lan, Changmao Cheng, Yichen Wei</span><br><a href='https://arxiv.org/abs/2003.11339'><span>arXiv version</span></a></p><p><span>Balanced Alignment for Face Recognition: A Joint Learning Approach</span><br><span>Huawei Wei, Peng Lu, Yichen Wei</span><br><a href='https://arxiv.org/abs/2003.10168'><span>Tech report on arXiv</span></a><span>, March 2020</span></p><p><span>3D Dense Face Alignment via Graph Convolution Networks</span><br><span>Huawei Wei, Shuang Liang, Yichen Wei</span><br><a href='https://arxiv.org/abs/1904.05562'><span>Tech report on arXiv</span></a><span>, April 2019</span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2019/papers/Chu_Vehicle_Re-Identification_With_Viewpoint-Aware_Metric_Learning_ICCV_2019_paper.pdf'><span>Vehicle Re-Identification With Viewpoint-Aware Metric Learning</span></a><span>, ICCV 2019</span><br><span>Ruihang Chu, Yifan Sun, Yadong Li, Zheng Liu, Chi Zhang, Yichen Wei</span><br><a href='https://arxiv.org/abs/1910.04104'><span>arXiv version</span></a></p><p><a href='http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Re-Identification_Supervised_Texture_Generation_CVPR_2019_paper.pdf'><span>Re-Identification Supervised Texture Generation</span></a><span>, CVPR 2019</span><br><span>Jian Wang, Yunshan Zhong, Yachun Li, Chi Zhang, Yichen Wei</span><br><a href='https://arxiv.org/abs/1904.03385'><span>arXiv version</span></a></p><p><span>Rethinking on Multi-Stage Networks for Human Pose Estimation</span><br><span>Wenbo Li, Zhicheng Wang, Binyi Yin, Qixiang Peng, Yuming Du, Tianzi Xiao, Gang Yu, Hongtao Lu, Yichen Wei, Jian Sun</span><br><a href='https://arxiv.org/abs/1901.00148'><span>Tech report on arXiv</span></a><span>, Jan 2019, 1st winner for </span><a href='http://cocodataset.org/index.htm#keypoints-2019'><span>COCO 2019 keypoint detection</span></a></p><p><span>Towards High Performance Video Object Detection for Mobiles  </span><br><span>Xizhou Zhu, Jifeng Dai, Xingchi Zhu, Yichen Wei, Lu Yuan  </span><br><a href='https://arxiv.org/abs/1804.05830'><span>Tech report on arXiv</span></a><span>, April 2018  </span><br></p><p><a href='http://openaccess.thecvf.com/content_ECCV_2018/papers/Bin_Xiao_Simple_Baselines_for_ECCV_2018_paper.pdf'><span>Simple Baselines for Human Pose Estimation and Tracking</span></a><span>, ECCV 2018  </span><br><span>Bin Xiao, Haiping Wu, Yichen Wei </span><br><a href='https://arxiv.org/abs/1804.06208'><span>arXiv version</span></a><span>  </span><br><a href='https://github.com/Microsoft/human-pose-estimation.pytorch'><span>Code</span></a><span>  </span><br></p><p><a href='http://openaccess.thecvf.com/content_ECCV_2018/papers/Jiayuan_Gu_Learning_Region_Features_ECCV_2018_paper.pdf'><span>Learning Region Features for Object Detection</span></a><span>, ECCV 2018 </span><br><span>Jiayuan Gu, Han Hu, Liwei Wang, Yichen Wei, Jifeng Dai </span><br><a href='https://arxiv.org/abs/1803.07066'><span>arXiv version</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiao_Sun_Integral_Human_Pose_ECCV_2018_paper.pdf'><span>Integral Human Pose Regression</span></a><span>, ECCV 2018 </span><br><span>Xiao Sun, Bin Xiao, Shuang Liang, Yichen Wei </span><br><a href='https://arxiv.org/abs/1711.08229'><span>arXiv version</span></a><span> </span><br><a href='https://jimmysuen.github.io/slides/xiaosun_integral_human_pose_regression.pptx'><span>Slides</span></a><span> </span><a href='https://github.com/JimmySuen/integral-human-pose'><span>Code</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_cvpr_2018/papers/Hu_Relation_Networks_for_CVPR_2018_paper.pdf'><span>Relation Networks for Object Detection</span></a><span>, CVPR 2018(</span><strong><span>Oral</span></strong><span>)</span><br><span>Han Hu, Jiayuan Gu, Zheng Zhang, Jifeng Dai, Yichen Wei </span><br><a href='https://arxiv.org/abs/1711.11575'><span>arXiv version</span></a><span>  </span><br><a href='https://github.com/msracver/Relation-Networks-for-Object-Detection'><span>Code</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhu_Towards_High_Performance_CVPR_2018_paper.pdf'><span>Towards High Performance Video Object Detection</span></a><span>, CVPR 2018 (</span><strong><span>Spotlight</span></strong><span>) </span><br><span>Xizhou Zhu, Jifeng Dai, Lu Yuan, Yichen Wei </span><br><a href='https://arxiv.org/abs/1711.11577'><span>arXiv version</span></a><span>  </span><br></p><p><a href='(http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhao_Pseudo_Mask_Augmented_CVPR_2018_paper.pdf)'><span>Pseudo-Mask Augmented Object Detection</span></a><span>, CVPR 2018 </span><br><span>Xiangyun Zhao, Shuang Liang, Yichen Wei </span><br><a href='https://arxiv.org/abs/1803.05858'><span>arXiv version</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf'><span>Deformable Convolutional Networks</span></a><span>, ICCV 2017 (</span><strong><span>Oral</span></strong><span>)</span>
+<span>Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, and Yichen Wei </span><br><a href='https://arxiv.org/abs/1703.06211'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/Deformable-ConvNets'><span>Code</span></a><span>  </span><a href='http://www.jifengdai.org/slides/Deformable_Convolutional_Networks_Oral.pdf'><span>Slides</span></a><span>  </span><a href='http://presentations.cocodataset.org/COCO17-Detect-MSRA.pdf'><span>COCO 2017 workshop</span></a><span>  </span><a href='https://github.com/felixlaumon/deform-conv'><span>A third party demon on MNIST</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Flow-Guided_Feature_Aggregation_ICCV_2017_paper.pdf'><span>Flow-Guided Feature Aggregation for Video Object Detection</span></a><span>, ICCV 2017</span><br><span>Xizhou Zhu, Yujie Wang, Jifeng Dai, Lu Yuan, Yichen Wei </span><br><a href='https://arxiv.org/abs/1703.10025'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/Flow-Guided-Feature-Aggregation'><span>Code</span></a><span>  </span><a href='https://www.youtube.com/watch?v=R2h3DbTPvVg'><span>Video</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Sun_Compositional_Human_Pose_ICCV_2017_paper.pdf'><span>Compositional Human Pose Regression</span></a><span>, ICCV 2017 </span><br><span>Xiao Sun, Jiaxiang Shang, Shuang Liang, Yichen Wei </span><br><a href='https://arxiv.org/abs/1704.00159'><span>arXiv version</span></a><span> </span><br><a href='https://jimmysuen.github.io/slides/xiaosun_compositional_pose.pptx'><span>Slides</span></a><span> </span><a href='https://www.youtube.com/watch?v=c-hgHqVK90M'><span>Video</span></a><span> </span><br></p><p><a href='http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhou_Towards_3D_Human_ICCV_2017_paper.pdf'><span>Towards 3D Human Pose Estimation in the Wild: A Weakly-Supervised Approach</span></a><span>, ICCV 2017 </span><br><span>Xingyi Zhou, Qixing Huang, Xiao Sun, Xiangyang Xue, Yichen Wei </span><br><a href='https://arxiv.org/abs/1704.02447'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/xingyizhou/pose-hg-3d'><span>Code</span></a><span> </span><br></p><p><a href='https://zpascal.net/cvpr2017/Zhu_Deep_Feature_Flow_CVPR_2017_paper.pdf'><span>Deep Feature Flow for Video Recognition</span></a><span>, CVPR 2017 </span><br><span>Xizhou Zhu, Yuwen Xiong, Jifeng Dai, Lu Yuan, Yichen Wei </span><br><a href='https://arxiv.org/abs/1611.07715'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/Flow-Guided-Feature-Aggregation'><span>Code</span></a><span>  </span><a href='https://www.youtube.com/watch?v=R2h3DbTPvVg'><span>Video</span></a><span> </span><br></p><p><a href='https://www.zpascal.net/cvpr2017/Li_Fully_Convolutional_Instance-Aware_CVPR_2017_paper.pdf'><span>Fully Convolutional Instance-aware Semantic Segmentation</span></a><span>, CVPR 2017 (</span><strong><span>Spotlight</span></strong><span>)</span><br><span>Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji, Yichen Wei </span><br><a href='https://arxiv.org/abs/1611.07709'><span>arXiv version</span></a><span> </span><br><a href='https://github.com/msracver/FCIS'><span>Code</span></a><span> </span><br></p><h4 id='early-publications-before-2016'><span>Early Publications (before 2016)</span></h4><h5 id='conference-papers'><span>Conference Papers</span></h5><p><a href='https://arxiv.org/abs/1609.05317'><span>Deep Kinematic Pose Regression</span></a>
+<span>Xingyi Zhou, Xiao Sun, Wei Zhang, Shuang Liang, </span><em><span>Yichen Wei</span></em>
+<span>ECCV Workshop on Geometry Meets Deep Learning, 2016</span>
+<img src="publications\ECCV16_DeepKinematicPoseRegression.JPG" alt="drawing" width="600px" align="left"/><span> </span><br clear="all" /></p><p><a href='https://arxiv.org/abs/1607.01437'><span>Attribute Recognition from Adaptive Parts</span></a>
+<span>Luwei Yang, Ligeng Zhu, </span><em><span>Yichen Wei</span></em><span>, Shuang Liang, Ping Tan</span>
+<span>BMVC 2016</span>
+<img src="publications\BMVC16_AttributeFromAdaptiveParts.JPG" alt="drawing" width="600px" align="left"/><span> </span><br clear="all" /></p><p><a href='publications/IJCAI16_DeepHandModel.pdf'><span>Model-based Deep Hand Pose Estimation</span></a>
+<span>Xingyi Zhou, Qingfu Wan, Wei Zhang, Xiangyang Xue, </span><em><span>Yichen Wei</span></em>
+<span>IJCAI 2016</span>
+<a href='https://github.com/xingyizhou/DeepModel'><span>Code</span></a>
+<img src="publications\IJCAI16_DeepHandModel.JPG" alt="drawing" width="600px" align="left"/><span> </span><br clear="all" /></p><p><a href='publications\CHI15_AccurateRobustFlexible.pdf'><span>Accurate, Robust, and Flexible Real-time Hand Tracking</span></a>
+<span>Toby Sharp, Cem Keskin, Duncan Robertson, Jon Taylor, Jamie Shotton, David Kim, Christoph Rhemann, Ido Leichter, Alon Vinnikov, </span><em><span>Yichen Wei</span></em><span>, Danie Freedman, Pushmeet Kohli, Eyal Krupka, Andrew Fitzgibbon, Shahram Izadi</span>
+<span>CHI 2015</span>
+<a href='https://www.youtube.com/watch?v=RQ-kAoaNc60'><span>Video</span></a>
+<img src="publications\CHI15_AccurateRobustFlexible.JPG" alt="drawing" width="600px" align="left"/><span> </span><br clear="all" /></p><p><a href='publications\CVPR15_HandPoseRegression.pdf'><span>Cascaded Hand Pose Regression</span></a>
+<span>Xiao Sun, </span><em><span>Yichen Wei</span></em><span>, Shuang Liang, Xiaoou Tang, Jian Sun</span>
+<span>CVPR 2015</span>
+<a href='https://www.dropbox.com/s/c91xvevra867m6t/cvpr15_MSRAHandGestureDB.zip?dl=0'><span>Dataset</span></a><span> </span><a href='https://jimmysuen.github.io/txt/cvpr15_MSRAHandGestureDB_readme.txt'><span>Readme</span></a>
+<a href='https://www.youtube.com/watch?v=6Zc5vU_9uUA'><span>Video</span></a>
+<img src="publications\CVPR15_HandPoseRegression.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR15_MultiBranchProposal.pdf'><span>Object Proposal by Multi-branch Hierarchical Segmentation</span></a>
+<span>Chaoyang Wang, Long Zhao, Shuang Liang, Liqing Zhang, Jinyuan Jia, </span><em><span>Yichen Wei</span></em>
+<span>CVPR 2015</span>
+<img src="publications\CVPR15_MultiBranchProposal.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR15_RefineRandomForest.pdf'><span>Global Refinement of Random Forest</span></a>
+<span>Shaoqing Ren, Xudong Cao, </span><em><span>Yichen Wei</span></em><span>, Jian Sun</span>
+<span>CVPR 2015</span>
+<img src="publications\CVPR15_RefineRandomForest.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\ACCV14_SaliencyBaseline.pdf'><span>Size and Location Matter: a New Baseline for Salient Object Detection</span></a>
+<span>Long Zhao, Shuang Liang, </span><em><span>Yichen Wei</span></em><span>, Jinyuan Jia</span>
+<span>ACCV 2014</span>
+<img src="publications\ACCV14_SaliencyBaseline.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\ECCV14_JointDetectAlign.pdf'><span>Joint Cascade Face Detection and Alignment</span></a>
+<span>Dong Chen, Shaoqing Ren, </span><em><span>Yichen Wei</span></em><span>, Xudong Cao, Jian Sun</span>
+<span>ECCV 2014</span>
+<img src="publications\ECCV14_JointDetectAlign.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR14_FaceAlignment.pdf'><span>Face Alignment at 3000 FPS by Regressing Local Binary Features</span></a>
+<span>Shaoqing Ren, Xudong Cao, </span><em><span>Yichen Wei</span></em><span>, Jian Sun</span>
+<span>CVPR 2014 (</span><strong><span>Oral</span></strong><span>)</span>
+<a href='https://www.youtube.com/watch?v=TOVFOYrXdIQ'><span>Video</span></a>
+<img src="publications\CVPR14_FaceAlignment.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR14_HandTracking.pdf'><span>Realtime and Robust Hand Tracking from Depth</span></a>
+<span>Chen Qian, Xiao Sun, </span><em><span>Yichen Wei</span></em><span>, Xiaoou Tang, Jian Sun</span>
+<span>CVPR 2014 (</span><strong><span>Oral</span></strong><span>)</span>
+<a href='https://www.dropbox.com/s/t91imizfdaf4i5l/cvpr14_MSRAHandTrackingDB.zip?dl=0'><span>Dataset</span></a><span> </span><a href='https://jimmysuen.github.io/txt/cvpr14_MSRAHandTrackingDB_readme.txt'><span>Readme</span></a>
+<a href='https://www.youtube.com/watch?v=lJ0a0ndezFU'><span>Video</span></a>
+<img src="publications\CVPR14_HandTracking.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR14_SaliencyOptimization.pdf'><span>Saliency Optimization from Robust Background Detection</span></a>
+<span>Wangjiang Zhu, Shuang Liang, </span><em><span>Yichen Wei</span></em><span>, Jian Sun</span>
+<span>CVPR 2014</span>
+<a href='publications\cvpr14_saliency_code.zip'><span>Code</span></a>
+<img src="publications\CVPR14_SaliencyOptimization.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\ICCV13_WeightedMedianFiltering.pdf'><span>Constant Time Weighted Median Filtering for Stereo Matching and Beyond</span></a>
+<span>Ziyang Ma, Kaiming He, </span><em><span>Yichen Wei</span></em><span>, Jian Sun, Enhua Wu</span>
+<span>ICCV 2013</span>
+<img src="publications\ICCV13_WeightedMedianFiltering.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\ECCV12_GeodesicSaliency.pdf'><span>Geodesic Saliency Using Background Priors</span></a>
+<em><span>Yichen Wei</span></em><span>, Fang Wen, Wangjiang Zhu, Jian Sun</span>
+<span>ECCV 2012</span>
+<a href='publications\ECCV12_GeodesicSaliency.pptx'><span>Slides</span></a><span> </span><a href='publications\cvpr14_saliency_code.zip'><span>Code</span></a>
+<img src="publications\ECCV12_GeodesicSaliency.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR12_FaceAlignment.pdf'><span>Face Alignment by Explicit Shape Regression</span></a>
+<span>Xudong Cao, </span><em><span>Yichen Wei</span></em><span>, Fang Wen, Jian Sun</span>
+<span>CVPR 2012 (</span><strong><span>Oral</span></strong><span>)</span>
+<a href='publications\CVPR12_FaceAlignment.pptx'><span>Slides</span></a><span> </span><a href='publications\CVPR12_FaceAlignment.wmv'><span>Video</span></a>
+<img src="publications\CVPR12_FaceAlignment.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR12_MultipleClassLearning.pdf'><span>Unsupervised Object Class Discovery via Saliency-Guided Multiple Class Learning</span></a><span> </span>
+<span>Jun-Yan Zhu, Jiajun Wu, </span><em><span>Yichen Wei</span></em><span>, Eric Chang, Zhuowen Tu</span>
+<span>CVPR 2012</span>
+<img src="publications\CVPR12_MultipleClassLearning.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\ICCV11_SalientObjectDetection.pdf'><span>Salient Object Detection by Composition</span></a>
+<span>Jie Feng, </span><em><span>Yichen Wei</span></em><span>, Litian Tao, Chao Zhang, Jian Sun</span>
+<span>ICCV 2011</span>
+<img src="publications\ICCV11_SalientObjectDetection.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR10_PhotometricStereo.pdf'><span>Self-calibrating Photometric Stereo</span></a>
+<span>Boxin Shi, Yasuyuki Matsushita, </span><em><span>Yichen Wei</span></em><span>, Chao Xu, Ping Tan</span>
+<span>CVPR 2010</span>
+<img src="publications\CVPR10_PhotometricStereo.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\ICCV07_InteractiveTracking.pdf'><span>Interactive Offline Tracking for Color Objects</span></a>
+<em><span>Yichen Wei</span></em><span>, Jian Sun, Xiaoou Tang, Heung-Yeung Shum</span>
+<span>ICCV 2007</span>
+<img src="publications\ICCV07_InteractiveTracking.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\SBIM07_HairSketching.pdf'><span>Sketching Hairstyles</span></a>
+<span>Hongbo Fu, </span><em><span>Yichen Wei</span></em><span>, Chiew-Lan Tai, Long Quan</span>
+<span>EUROGRPHICS Workshop on Sketch-Based Interfaces and Modeling, 2007</span>
+<img src="publications\SBIM07_HairSketching.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR05_AsymmetricalStereo.pdf'><span>Asymmetrical Occlusion Handling Using Graph Cut for Multi-View Stereo</span></a>
+<em><span>Yichen Wei</span></em><span> and Long Quan</span>
+<span>CVPR 2005</span>
+<img src="publications\CVPR05_AsymmetricalStereo.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\CVPR04_ProgressiveStereo.pdf'><span>Region-Based Progressive Stereo Matching</span></a>
+<em><span>Yichen Wei</span></em><span> and Long Quan</span>
+<span>CVPR 2004</span>
+<img src="publications\CVPR04_ProgressiveStereo.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\ACCV04_CircularMotion.pdf'><span>Construction and Rendering of Concentric Mosaics from a Handheld Camera</span></a>
+<span>Guang Jiang, </span><em><span>Yichen Wei</span></em><span>, Hung-Tat TSUI, Long Quan</span>
+<span>ACCV 2004</span></p><p><a href='publications\ACCV04_Stereo.pdf'><span>Fast Segmentation-Based Dense Stereo from Quisai-Dense Matching</span></a>
+<em><span>Yichen Wei</span></em><span>, Maxime Lhuillier and Long Quan</span>
+<span>ACCV 2004 </span><br>
+<img src="publications\ACCV04_Stereo.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><h5 id='journal-papers'><span>Journal Papers</span></h5><p><span>Face alignment via regressing local binary features</span>
+<span>Shaoqing Ren, Xudong Cao, </span><em><span>Yichen Wei</span></em><span>, Jian Sun</span>
+<span>IEEE Transactions on Image Processing, 2016</span></p><p><a href='publications\PAMI15_SketchMatching.pdf'><span>Sketch Matching on Topology Product Graph</span></a>
+<span>Shuang Liang, Jun Luo, Wenyin Liu, </span><em><span>Yichen Wei</span></em>
+<span>TPAMI 2015</span>
+<img src="publications\PAMI15_SketchMatching.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><span>Face Alignment by Explicit Shape Regression</span>
+<span>Xudong Cao, </span><em><span>Yichen Wei</span></em><span>, Fang Wen, Jian Sun</span>
+<span>IJCV 2014</span></p><p><a href='publications\IEEEComputer11_KinectIdentity.pdf'><span>Kinect Identity: Technology and Experience</span></a>
+<span>Tommer Leyvand, Casey Meekhof, </span><em><span>Yichen Wei</span></em><span>, Jian Sun, Baining Guo</span>
+<span>IEEE Computer, 2011</span>
+<img src="publications\IEEEComputer11_KinectIdentity.JPG" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\SIGGRAPH05_HairModeling.pdf'><span>Modeling Hair from Multiple Views</span></a>
+<em><span>Yichen Wei</span></em><span>, Eyal Ofek, Long Quan, Heung-Yeung Shum</span>
+<span>Siggraph 2005</span>
+<img src="publications\SIGGRAPH05_HairModeling.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\PAMI05_CircularMotion.pdf'><span>Outward-Looking Circular Motion Analysis of Large Image Sequences</span></a>
+<span>Guang Jiang, </span><em><span>Yichen Wei</span></em><span>, Long Quan, Hung-Tat Tsui, Heung-Yeung Shum</span>
+<span>TPAMI 2005</span>
+<img src="publications\PAMI05_CircularMotion.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p><p><a href='publications\IVC04_PlanarMotion.pdf'><span>Constrained planar motion analysis by decomposition</span></a>
+<span>Long Quan, </span><em><span>Yichen Wei</span></em><span>, Le Lu, Heung-Yeung Shum</span>
+<span>Image and Vision Computing, 2004</span>
+<img src="publications\IVC04_PlanarMotion.bmp" alt="drawing" width="600px" align="left"/><br clear="all" /></p></div></div>
 </body>
 </html>
