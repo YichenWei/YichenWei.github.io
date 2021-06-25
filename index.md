@@ -45,6 +45,7 @@ See [job description](recruit.html).
 - [COCO Challenge 2017](https://places-coco2017.github.io/#winners), 3rd place in object detection task with [Deformable Convolutional Networks](https://github.com/msracver/Deformable-ConvNets).
 - [COCO Challenge 2016](http://image-net.org/challenges/ilsvrc+coco2016), 1st place in object segmentation task with [Fully Convolutional Instance-aware Semantic Segmentation](https://github.com/msracver/FCIS).
 
-##### [Publications](publications.html)
+##### [Publications in chronology](publications.html)
+##### [Publications in topic](publications_in_topic.html)
 
-Last Modification: June 16th, 2021
+Last Modification: June 25th, 2021

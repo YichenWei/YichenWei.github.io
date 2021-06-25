@@ -11,6 +11,10 @@ Fangao Zeng, Bin Dong, Tiancai Wang, Cheng Chen, Xiangyu Zhang, Yichen Wei
 Cheng Zou, Bohan Wang, Yue Hu, Junqi Liu, Qian Wu, Yu Zhao, Boxun Li, Chenguang Zhang, Chi Zhang, Yichen Wei, Jian Sun
 [arXiv version](https://arxiv.org/abs/2103.04503)
 
+[Dense Point Diffusion for 3D Object Detection](https://ieeexplore.ieee.org/abstract/document/9320330/), 3DV 2020,
+Xu Liu, Jiayan Cao, Qianqian Bi, Jian Wang, Boxin Shi, Yichen Wei
+[PDF online](https://jianwang-cmu.github.io/20DensePointDiffusion/3DV_DPD.pdf)
+
 [Dynamic Metric Learning: Towards a Scalable Metric Space To Accommodate Multiple Semantic Scales](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Dynamic_Metric_Learning_Towards_a_Scalable_Metric_Space_To_Accommodate_CVPR_2021_paper.html), CVPR 2021
 Yifan Sun, Yuke Zhu, Yuhan Zhang, Pengkun Zheng, Xi Qiu, Chi Zhang, Yichen Wei
 [arXiv version](https://arxiv.org/abs/2103.11781)
@@ -24,6 +28,10 @@ Yifan Sun, Yuke Zhu, Yuhan Zhang, Pengkun Zheng, Xi Qiu, Chi Zhang, Yichen Wei
 [Single Path One-Shot Neural Architecture Search with Uniform Sampling](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123610528.pdf), ECCV 2020<br />Zichao Guo, Xiangyu Zhang, Haoyuan Mu, Wen Heng, Zechun Liu, Yichen Wei, Jian sun <br />[arXiv version](https://arxiv.org/abs/1904.00420)<br />
 
 [Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization](https://openreview.net/pdf?id=SkgGjRVKDS), ICLR 2020 <br />Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun <br />[arXiv version](https://arxiv.org/abs/2001.06838)
+
+Joint Multi-Dimension Pruning
+Zechun Liu, Xiangyu Zhang, Zhiqiang Shen, Zhe Li, Yichen Wei, Kwang-Ting Cheng, Jian Sun
+[Tech Report on arXiv](https://arxiv.org/abs/2005.08931), 2020
 
 [Circle Loss: A Unified Perspective of Pair Similarity Optimization](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Circle_Loss_A_Unified_Perspective_of_Pair_Similarity_Optimization_CVPR_2020_paper.pdf), CVPR 2020 (**Oral**) <br />Yifan Sun, Changmao Cheng, Yuhan Zhang, Chi Zhang, Liang Zheng, Zhongdao Wang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2002.10857)
 
