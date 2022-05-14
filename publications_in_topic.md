@@ -1,4 +1,7 @@
+[TOC]
+
 #### Uncategorized
+
 [Prime-Aware Adaptive Distillation](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640647.pdf), ECCV 2020 <br />Youcai Zhang, Zhonghao Lan, Yuchen Dai, Fangao Zeng, Yan Bai, Jie Chang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2008.01458)
 
 [Angle-based Search Space Shrinking for Neural Architecture SearcSpherical Feature Transform for Deep Metric Learning](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640120.pdf), ECCV 2020 <br />Yiming Hu, Yuding Liang, Zichao Guo, Ruosi Wan, Xiangyu Zhang, Yichen Wei, Qingyi Gu, Jian Sun <br />[arXiv version](https://arxiv.org/abs/2004.13431)
