@@ -1,11 +1,18 @@
 #### Recent Publications (since 2017)
-SOLQ: Segmenting Objects by Learning Queries
-Bin Dong, Fangao Zeng, Tiancai Wang, Xiangyu Zhang, Yichen Wei
-[Tech report on arXiv](https://arxiv.org/abs/2106.02351), 2021
-
-MOTR: End-to-End Multiple-Object Tracking with TRansformer
+[MOTR: End-to-End Multiple-Object Tracking with TRansformer](https://arxiv.org/abs/2105.03247), ECCV 2022
 Fangao Zeng, Bin Dong, Tiancai Wang, Cheng Chen, Xiangyu Zhang, Yichen Wei
-[Tech report on arXiv](https://arxiv.org/abs/2105.03247), 2021
+
+[SOLQ: Segmenting Objects by Learning Queries](https://arxiv.org/abs/2106.02351), NIPS 2021
+Bin Dong, Fangao Zeng, Tiancai Wang, Xiangyu Zhang, Yichen Wei
+
+Uncertainty learning for noise resistant sketch-based 3D shape retrieval, IEEE Transactions on Image Processing, 2021
+Shuang Liang, Weidong Dai, Yichen Wei
+
+[Joint Multi-Dimension Pruning via Numerical Gradient Update](https://arxiv.org/abs/2005.08931), IEEE Transactions on Image Processing, 2021
+Zechun Liu, Xiangyu Zhang, Zhiqiang Shen, Zhe Li, Yichen Wei, Kwang-Ting Cheng, Jian Sun
+
+[Dynamic Metric Learning: Towards a Scalable Metric Space to Accommodate Multiple Semantic Scales](https://arxiv.org/abs/2103.11781), CVPR 2021
+Yifan Sun, Yuke Zhu, Yuhan Zhang, Pengkun Zheng, Xi Qiu, Chi Zhang, Yichen Wei
 
 [End-to-End Human Object Interaction Detection with HOI Transformer](https://openaccess.thecvf.com/content/CVPR2021/papers/Zou_End-to-End_Human_Object_Interaction_Detection_With_HOI_Transformer_CVPR_2021_paper.pdf), CVPR 2021
 Cheng Zou, Bohan Wang, Yue Hu, Junqi Liu, Qian Wu, Yu Zhao, Boxun Li, Chenguang Zhang, Chi Zhang, Yichen Wei, Jian Sun

@@ -6,7 +6,7 @@
 <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -22,8 +22,6 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -51,7 +49,7 @@ sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inh
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
+thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
@@ -73,6 +71,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
@@ -87,7 +86,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
@@ -130,23 +129,14 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
 kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
-#math-inline-preview-content { zoom: 1.1; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
@@ -165,9 +155,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .messageText { stroke: none !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
 .md-fences.md-fences-math { font-size: 1em; }
-.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
@@ -210,6 +198,8 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
 
 
 :root {
@@ -225,10 +215,11 @@ mark .md-meta { color: rgb(0, 0, 0); }
     /* open-sans-700italic - latin-ext_latin */
   html {
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -467,11 +458,8 @@ code {
     html {
         font-size: 13px;
     }
-    table,
     pre {
         page-break-inside: avoid;
-    }
-    pre {
         word-wrap: break-word;
     }
 }
@@ -603,7 +591,7 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>index_cn</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='危夷晨'><strong><span>危夷晨</span></strong></h1><p><img src="./yichen_2014_crop.jpg" alt="drawing" width="300px" align="left"/><span> </span></p><p><br clear="all" /></p><!--- do not know how to resize the image --->
-<!--- ![](https://yichenwei.github.io/yichen_2014_crop.jpg) ---><p><!--- comment ---><span> </span></p><h4 id='旷视科技上海研究院院长'><strong><span>旷视科技上海研究院院长</span></strong></h4><p><span>switch to </span><a href='index.html'><span>English homepage</span></a><span>。</span></p><p><span>电子邮件: weiyichen at megvii.com</span></p><p><span>我于2018年7月加入</span><a href='https://megvii.com/'><span>旷视科技</span></a><span>，任上海研究院院长。在此之前, 我在</span><a href='https://www.msra.cn/'><span>微软亚洲研究院</span></a><span>视觉计算组工作了12年。我于2006年在香港科技大学获得博士学位，于2001年在北京大学获得学士学位。</span></p><p><span>我的研究方向为深度学习和计算机视觉。</span></p><p><span>我的</span><a href='https://scholar.google.com/citations?hl=en&amp;pli=1&amp;user=O7A6nYMAAAAJ'><span>谷歌学术</span></a><span>引用数约为15,000, h指数为42。</span></p><p><span>我在微软期间的研究工作成功转化到微软的产品，包括</span><a href='https://ieeexplore.ieee.org/document/5742015/'><span>Kinect 身份识别</span></a><span>, </span><a href='https://www.youtube.com/watch?v=1AsoSnOmhvU'><span>Windows Hello</span></a><span>, </span><a href='https://azure.microsoft.com/en-us/services/cognitive-services/'><span>微软认知服务</span></a><span>, 必应, Office, and 微软小冰, 等等。</span></p><h5 id='上海研究院的工作岗位长期开放研究员工程师实习）'><span>上海研究院的工作岗位长期开放（研究员/工程师/实习）</span></h5><p><span>有意向者请发简历给我，主题为“旷视上海研究院工作申请”或者“旷视上海研究院实习申请”。</span></p><h5 id='动态'><span>动态</span></h5><ul><li><span>2020年3月, 旷视的深度学习框架</span><a href='https://megengine.org.cn/'><span>MegEngine</span></a><span> (天元) 在</span><a href='https://github.com/MegEngine'><span>GitHub</span></a><span>开源。</span></li><li><span>2019年11月，我在将门创投进行了一个技术</span><a href='https://www.bilibili.com/video/av77388408'><span>宣讲</span></a><span> ，主题为 &quot;不确定性估计在计算机视觉中的应用&quot;。</span></li><li><span>2019年4月，我们关于</span><a href='https://arxiv.org/abs/1904.00420'><span>AutoML</span></a><span>的工作获得一些公众报道（</span><a href='https://mp.weixin.qq.com/s/Dmml7DrujXnOAEhU7vugmw'><span>新智元</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/0_zFoMUh-4s8BKl2rSzmig'><span>机器之心</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/pCsZi7INorI0HN7o5zf1Bw'><span>量子位</span></a><span>, ...）。</span></li><li><span>2019年1月, 我接受了&quot;数据科学50人&quot; 栏目的</span><a href='https://new.qq.com/omn/20190110/20190110A0G9OG.html'><span>采访</span></a><span>。</span></li><li><span>2019年7月，我接受了新智元的</span><a href='https://baijiahao.baidu.com/s?id=1607139006385580393&amp;wfr=spider&amp;for=pc'><span>采访</span></a><span>。</span></li></ul><h5 id='计算机视觉竞赛获奖'><span>计算机视觉竞赛获奖</span></h5><ul><li><a href='http://cocodataset.org/workshop/coco-mapillary-iccv-2019.html'><span>COCO and Mapillary Challenge 2019</span></a><span>, 1st place in </span><a href='http://cocodataset.org/index.htm#keypoints-2019'><span>keypoint detection</span></a><span> task with </span><a href='https://arxiv.org/abs/1901.00148'><span>Rethinking on Multi-Stage Networks for Human Pose Estimation</span></a></li><li><span>Our </span><a href='https://github.com/JimmySuen/integral-human-pose'><span>integral pose regression method</span></a><span> has won the 2nd place of  </span><a href='http://vision.imar.ro/human3.6m/ranking.php'><span>ECCV 2018 3D Human Pose Estimation Challenge</span></a></li><li><span>Our </span><a href='https://github.com/Microsoft/human-pose-estimation.pytorch'><span>simple baseline method</span></a><span> has won the winner of  </span><a href='https://posetrack.net/workshops/eccv2018/posetrack_eccv_2018_results.html'><span>PoseTrack2018 Multi-person Pose Tracking Challenge</span></a><span> and the 2nd place of  </span><a href='http://cocodataset.org/#keypoints-leaderboard'><span>keypoint detection task of COCO 2018</span></a></li><li><a href='https://places-coco2017.github.io/#winners'><span>COCO Challenge 2017</span></a><span>, 3rd place in object detection task with </span><a href='https://github.com/msracver/Deformable-ConvNets'><span>Deformable Convolutional Networks</span></a><span>.</span></li><li><a href='http://image-net.org/challenges/ilsvrc+coco2016'><span>COCO Challenge 2016</span></a><span>, 1st place in object segmentation task with </span><a href='https://github.com/msracver/FCIS'><span>Fully Convolutional Instance-aware Semantic Segmentation</span></a><span>.</span></li></ul><h5 id='发表论文按时间顺序）'><a href='publications.html'><span>发表论文（按时间顺序）</span></a></h5><h5 id='发表论文按主题顺序）publicationsintopichtml'><a href='publications_in_topic.html'><span>发表论文（按主题顺序）</span></a></h5><p><span>最近修改于: 2021年6月25日</span></p></div></div>
+<div id='write'  class=''><h1 id='危夷晨'><strong><span>危夷晨</span></strong></h1><p><img src="./yichen_portrait.jpg" alt="drawing" width="300px" align="left"/><span> </span></p><p><br clear="all" /></p><!--- do not know how to resize the image --->
+<!--- ![](https://yichenwei.github.io/yichen_portrait.jpg) ---><p><!--- comment ---><span> </span></p><p><span>switch to </span><a href='index.html'><span>English homepage</span></a><span>。</span></p><h4 id='数坤科技研发副总裁'><strong><span>数坤科技研发副总裁</span></strong></h4><p><span>电子邮件: weiyichen at shukun.net</span></p><p><span>我于2021年11月加入</span><a href='https://www.shukun.net/'><span>数坤科技</span></a><span>。在此之前，我在</span><a href='https://megvii.com/'><span>旷视科技</span></a><span>任上海研究院院长3年，在</span><a href='https://www.msra.cn/'><span>微软亚洲研究院</span></a><span>视觉计算组工作了12年。我于2006年在香港科技大学获得博士学位，于2001年在北京大学获得学士学位。</span></p><p><span>我的研究方向为深度学习和计算机视觉。</span></p><p><span>我的</span><a href='https://scholar.google.com/citations?hl=en&amp;pli=1&amp;user=O7A6nYMAAAAJ'><span>谷歌学术</span></a><span>引用数约为23,000, h指数为48。</span></p><p><span>我在微软期间的研究工作成功转化到微软的产品，包括</span><a href='https://ieeexplore.ieee.org/document/5742015/'><span>Kinect 身份识别</span></a><span>, </span><a href='https://www.youtube.com/watch?v=1AsoSnOmhvU'><span>Windows Hello</span></a><span>, </span><a href='https://azure.microsoft.com/en-us/services/cognitive-services/'><span>微软认知服务</span></a><span>, 必应, Office, and 微软小冰, 等等。</span></p><h5 id='动态'><span>动态</span></h5><ul><li><span>2022年3月, 我在机器之心AI科技年会上作了主题为“AI在医疗影像的应用和探索”的</span><a href='https://www.bilibili.com/video/BV11u411v7CZ/?spm_id_from=333.999.0.0'><span>宣讲</span></a><span>.</span></li><li><span>2019年11月，我在将门创投进行了一个技术</span><a href='https://www.bilibili.com/video/av77388408'><span>宣讲</span></a><span> ，主题为 &quot;不确定性估计在计算机视觉中的应用&quot;。</span></li><li><span>2019年4月，我们关于</span><a href='https://arxiv.org/abs/1904.00420'><span>AutoML</span></a><span>的工作获得一些公众报道（</span><a href='https://mp.weixin.qq.com/s/Dmml7DrujXnOAEhU7vugmw'><span>新智元</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/0_zFoMUh-4s8BKl2rSzmig'><span>机器之心</span></a><span>, </span><a href='https://mp.weixin.qq.com/s/pCsZi7INorI0HN7o5zf1Bw'><span>量子位</span></a><span>, ...）。</span></li><li><span>2019年1月, 我接受了&quot;数据科学50人&quot; 栏目的</span><a href='https://new.qq.com/omn/20190110/20190110A0G9OG.html'><span>采访</span></a><span>。</span></li><li><span>2019年7月，我接受了新智元的</span><a href='https://baijiahao.baidu.com/s?id=1607139006385580393&amp;wfr=spider&amp;for=pc'><span>采访</span></a><span>。</span></li></ul><h5 id='代表性研究工作'><span>代表性研究工作</span></h5><ul><li><a href='https://arxiv.org/abs/1703.06211'><span>Deformable Convolutional Networks</span></a><span> ranks </span><a href='https://www.paperdigest.org/2023/01/most-influential-iccv-papers-2023-01/'><span>6th of the most influential papers in ICCV 2017</span></a><span> and won 3rd place in object detection task of </span><a href='https://places-coco2017.github.io/#winners'><span>COCO Challenge 2017</span></a><span>.</span></li><li><a href='https://arxiv.org/abs/1904.00420'><span>Single path one-shot neural architecture search with uniform sampling</span></a><span> ranks </span><a href='https://www.paperdigest.org/2023/01/most-influential-eccv-papers-2023-01/'><span>9th of the most influential papers in ECCV 2020</span></a><span>.</span></li><li><a href='https://arxiv.org/abs/1804.06208'><span>Simple Baselines For Human Pose Estimation And Tracking</span></a><span> ranks </span><a href='https://www.paperdigest.org/2023/01/most-influential-eccv-papers-2023-01/'><span>12th of the most influential papers in ECCV 2018</span></a><span>, won 1st place in the </span><a href='https://posetrack.net/workshops/eccv2018/posetrack_eccv_2018_results.html'><span>PoseTrack2018 Multi-person Pose Tracking Challenge</span></a><span> and 2nd place of  </span><a href='http://cocodataset.org/#keypoints-leaderboard'><span>keypoint detection task of COCO 2018</span></a><span>.</span></li><li><a href='https://yichenwei.github.io/publications/CVPR12_FaceAlignment.pdf'><span>Face Alignment by Explicit Shape Regression</span></a><span> ranks </span><a href='https://www.paperdigest.org/2023/01/most-influential-cvpr-papers-2023-01/'><span>12th of the most influential papers in CVPR 2012</span></a><span>.</span></li><li><a href='https://yichenwei.github.io/publications/CVPR14_SaliencyOptimization.pdf'><span>Saliency Optimization from Robust Background Detection</span></a><span> ranks </span><a href='https://www.paperdigest.org/2023/01/most-influential-cvpr-papers-2023-01/'><span>14th of the most influential papers in CVPR 2014</span></a><span>.</span></li><li><a href='https://arxiv.org/abs/1901.00148'><span>Rethinking on Multi-Stage Networks for Human Pose Estimation</span></a><span>  won 1st place in </span><a href='http://cocodataset.org/index.htm#keypoints-2019'><span>keypoint detection</span></a><span> task of  </span><a href='http://cocodataset.org/workshop/coco-mapillary-iccv-2019.html'><span>COCO and Mapillary Challenge 2019</span></a><span>.</span></li><li><a href='https://arxiv.org/abs/1611.07709'><span>Fully Convolutional Instance-aware Semantic Segmentation</span></a><span> won 1st place in object segmentation task of </span><a href='http://image-net.org/challenges/ilsvrc+coco2016'><span>COCO Challenge 2016</span></a><span>.</span></li><li><a href='http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiao_Sun_Integral_Human_Pose_ECCV_2018_paper.pdf'><span>Integral Human Pose Regression</span></a><span> won the 2nd place of  </span><a href='http://vision.imar.ro/human3.6m/ranking.php'><span>ECCV 2018 3D Human Pose Estimation Challenge</span></a><span>.</span></li></ul><h5 id='发表论文按时间顺序）'><a href='publications.html'><span>发表论文（按时间顺序）</span></a></h5><h5 id='发表论文按主题顺序）'><a href='publications_in_topic.html'><span>发表论文（按主题顺序）</span></a></h5><p><span>最近修改于: 2023年3月9日</span></p></div></div>
 </body>
 </html>

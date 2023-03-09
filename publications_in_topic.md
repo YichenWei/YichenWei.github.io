@@ -1,32 +1,21 @@
 [TOC]
 
-#### Uncategorized
+#### Network Architecture
 
-[Prime-Aware Adaptive Distillation](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640647.pdf), ECCV 2020 <br />Youcai Zhang, Zhonghao Lan, Yuchen Dai, Fangao Zeng, Yan Bai, Jie Chang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2008.01458)
+[Joint Multi-Dimension Pruning via Numerical Gradient Update](https://arxiv.org/abs/2005.08931), IEEE Transactions on Image Processing, 2021
+Zechun Liu, Xiangyu Zhang, Zhiqiang Shen, Zhe Li, Yichen Wei, Kwang-Ting Cheng, Jian Sun
 
 [Angle-based Search Space Shrinking for Neural Architecture SearcSpherical Feature Transform for Deep Metric Learning](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640120.pdf), ECCV 2020 <br />Yiming Hu, Yuding Liang, Zichao Guo, Ruosi Wan, Xiangyu Zhang, Yichen Wei, Qingyi Gu, Jian Sun <br />[arXiv version](https://arxiv.org/abs/2004.13431)
 
 [Single Path One-Shot Neural Architecture Search with Uniform Sampling](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123610528.pdf), ECCV 2020<br />Zichao Guo, Xiangyu Zhang, Haoyuan Mu, Wen Heng, Zechun Liu, Yichen Wei, Jian sun <br />[arXiv version](https://arxiv.org/abs/1904.00420)<br />
 
-[Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization](https://openreview.net/pdf?id=SkgGjRVKDS), ICLR 2020 <br />Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun <br />[arXiv version](https://arxiv.org/abs/2001.06838)
-
-Joint Multi-Dimension Pruning
-Zechun Liu, Xiangyu Zhang, Zhiqiang Shen, Zhe Li, Yichen Wei, Kwang-Ting Cheng, Jian Sun
-[Tech Report on arXiv](https://arxiv.org/abs/2005.08931), 2020
-
-[Re-Identification Supervised Texture Generation](http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Re-Identification_Supervised_Texture_Generation_CVPR_2019_paper.pdf), CVPR 2019<br />Jian Wang, Yunshan Zhong, Yachun Li, Chi Zhang, Yichen Wei<br />[arXiv version](https://arxiv.org/abs/1904.03385)
-
 [Deformable Convolutional Networks](http://openaccess.thecvf.com/content_ICCV_2017/papers/Dai_Deformable_Convolutional_Networks_ICCV_2017_paper.pdf), ICCV 2017 (**Oral**)
 Jifeng Dai, Haozhi Qi, Yuwen Xiong, Yi Li, Guodong Zhang, Han Hu, and Yichen Wei <br />[arXiv version](https://arxiv.org/abs/1703.06211) <br />[Code](https://github.com/msracver/Deformable-ConvNets)  [Slides](http://www.jifengdai.org/slides/Deformable_Convolutional_Networks_Oral.pdf)  [COCO 2017 workshop](http://presentations.cocodataset.org/COCO17-Detect-MSRA.pdf)
 
-[Global Refinement of Random Forest](publications\CVPR15_RefineRandomForest.pdf)
-Shaoqing Ren, Xudong Cao, *Yichen Wei*, Jian Sun
-CVPR 2015
-
 #### Metric Learning
-[Dynamic Metric Learning: Towards a Scalable Metric Space To Accommodate Multiple Semantic Scales](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Dynamic_Metric_Learning_Towards_a_Scalable_Metric_Space_To_Accommodate_CVPR_2021_paper.html), CVPR 2021
+
+[Dynamic Metric Learning: Towards a Scalable Metric Space to Accommodate Multiple Semantic Scales](https://arxiv.org/abs/2103.11781), CVPR 2021
 Yifan Sun, Yuke Zhu, Yuhan Zhang, Pengkun Zheng, Xi Qiu, Chi Zhang, Yichen Wei
-[arXiv version](https://arxiv.org/abs/2103.11781)
 
 [Spherical Feature Transform for Deep Metric Learning](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640409.pdf), ECCV 2020 <br />Yuke Zhu, Yan Bai, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2008.01469)
 
@@ -35,13 +24,11 @@ Yifan Sun, Yuke Zhu, Yuhan Zhang, Pengkun Zheng, Xi Qiu, Chi Zhang, Yichen Wei
 [Vehicle Re-Identification With Viewpoint-Aware Metric Learning](http://openaccess.thecvf.com/content_ICCV_2019/papers/Chu_Vehicle_Re-Identification_With_Viewpoint-Aware_Metric_Learning_ICCV_2019_paper.pdf), ICCV 2019<br />Ruihang Chu, Yifan Sun, Yadong Li, Zheng Liu, Chi Zhang, Yichen Wei<br />[arXiv version](https://arxiv.org/abs/1910.04104)
 
 #### Object Detection, Tracking and Segmentation
-SOLQ: Segmenting Objects by Learning Queries
-Bin Dong, Fangao Zeng, Tiancai Wang, Xiangyu Zhang, Yichen Wei
-[Tech report on arXiv](https://arxiv.org/abs/2106.02351), 2021
-
-MOTR: End-to-End Multiple-Object Tracking with TRansformer
+[MOTR: End-to-End Multiple-Object Tracking with TRansformer](https://arxiv.org/abs/2105.03247), ECCV 2022
 Fangao Zeng, Bin Dong, Tiancai Wang, Cheng Chen, Xiangyu Zhang, Yichen Wei
-[Tech report on arXiv](https://arxiv.org/abs/2105.03247), 2021
+
+[SOLQ: Segmenting Objects by Learning Queries](https://arxiv.org/abs/2106.02351), NIPS 2021
+Bin Dong, Fangao Zeng, Tiancai Wang, Xiangyu Zhang, Yichen Wei
 
 [End-to-End Human Object Interaction Detection with HOI Transformer](https://openaccess.thecvf.com/content/CVPR2021/papers/Zou_End-to-End_Human_Object_Interaction_Detection_With_HOI_Transformer_CVPR_2021_paper.pdf), CVPR 2021
 Cheng Zou, Bohan Wang, Yue Hu, Junqi Liu, Qian Wu, Yu Zhao, Boxun Li, Chenguang Zhang, Chi Zhang, Yichen Wei, Jian Sun
@@ -75,16 +62,7 @@ CVPR 2015
 *Yichen Wei*, Jian Sun, Xiaoou Tang, Heung-Yeung Shum
 ICCV 2007
 
-#### Face Recognition
-[Data Uncertainty Learning in Face Recognition](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chang_Data_Uncertainty_Learning_in_Face_Recognition_CVPR_2020_paper.pdf), CVPR 2020<br/>Jie Chang, Zhonghao Lan, Changmao Cheng, Yichen Wei<br/>[arXiv version](https://arxiv.org/abs/2003.11339)
-
-Balanced Alignment for Face Recognition: A Joint Learning Approach<br />Huawei Wei, Peng Lu, Yichen Wei<br />[Tech report on arXiv](https://arxiv.org/abs/2003.10168), March 2020
-
-[Kinect Identity: Technology and Experience](publications\IEEEComputer11_KinectIdentity.pdf)
-Tommer Leyvand, Casey Meekhof, *Yichen Wei*, Jian Sun, Baining Guo
-IEEE Computer, 2011
-
-#### Object (Body, Hand, Face) Pose Estimation and Tracking
+#### Pose Estimation and Tracking
 3D Dense Face Alignment via Graph Convolution Networks<br />Huawei Wei, Shuang Liang, Yichen Wei<br />[Tech report on arXiv](https://arxiv.org/abs/1904.05562), April 2019<br />
 
 Rethinking on Multi-Stage Networks for Human Pose Estimation<br />Wenbo Li, Zhicheng Wang, Binyi Yin, Qixiang Peng, Yuming Du, Tianzi Xiao, Gang Yu, Hongtao Lu, Yichen Wei, Jian Sun<br />[Tech report on arXiv](https://arxiv.org/abs/1901.00148), Jan 2019, 1st winner for [COCO 2019 keypoint detection](http://cocodataset.org/index.htm#keypoints-2019)
@@ -150,7 +128,18 @@ Xudong Cao, *Yichen Wei*, Fang Wen, Jian Sun
 CVPR 2012 (**Oral**)
 [Slides](publications\CVPR12_FaceAlignment.pptx) [Video](publications\CVPR12_FaceAlignment.wmv)
 
+#### Face Recognition
+
+[Data Uncertainty Learning in Face Recognition](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chang_Data_Uncertainty_Learning_in_Face_Recognition_CVPR_2020_paper.pdf), CVPR 2020<br/>Jie Chang, Zhonghao Lan, Changmao Cheng, Yichen Wei<br/>[arXiv version](https://arxiv.org/abs/2003.11339)
+
+Balanced Alignment for Face Recognition: A Joint Learning Approach<br />Huawei Wei, Peng Lu, Yichen Wei<br />[Tech report on arXiv](https://arxiv.org/abs/2003.10168), March 2020
+
+[Kinect Identity: Technology and Experience](publications\IEEEComputer11_KinectIdentity.pdf)
+Tommer Leyvand, Casey Meekhof, *Yichen Wei*, Jian Sun, Baining Guo
+IEEE Computer, 2011
+
 #### Saliency
+
 [Size and Location Matter: a New Baseline for Salient Object Detection](publications\ACCV14_SaliencyBaseline.pdf)
 Long Zhao, Shuang Liang, *Yichen Wei*, Jinyuan Jia
 ACCV 2014
@@ -210,7 +199,21 @@ ACCV 2004
 *Yichen Wei*, Maxime Lhuillier and Long Quan
 ACCV 2004 <br />
 
-#### Graphics
+#### Misc
+
+Uncertainty learning for noise resistant sketch-based 3D shape retrieval, IEEE Transactions on Image Processing, 2021
+Shuang Liang, Weidong Dai, Yichen Wei
+
+[Prime-Aware Adaptive Distillation](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123640647.pdf), ECCV 2020 <br />Youcai Zhang, Zhonghao Lan, Yuchen Dai, Fangao Zeng, Yan Bai, Jie Chang, Yichen Wei <br />[arXiv version](https://arxiv.org/abs/2008.01458)
+
+[Towards Stabilizing Batch Statistics in Backward Propagation of Batch Normalization](https://openreview.net/pdf?id=SkgGjRVKDS), ICLR 2020 <br />Junjie Yan, Ruosi Wan, Xiangyu Zhang, Wei Zhang, Yichen Wei, Jian Sun <br />[arXiv version](https://arxiv.org/abs/2001.06838)
+
+[Re-Identification Supervised Texture Generation](http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Re-Identification_Supervised_Texture_Generation_CVPR_2019_paper.pdf), CVPR 2019<br />Jian Wang, Yunshan Zhong, Yachun Li, Chi Zhang, Yichen Wei<br />[arXiv version](https://arxiv.org/abs/1904.03385)
+
+[Global Refinement of Random Forest](publications\CVPR15_RefineRandomForest.pdf)
+Shaoqing Ren, Xudong Cao, *Yichen Wei*, Jian Sun
+CVPR 2015
+
 [Sketch Matching on Topology Product Graph](publications\PAMI15_SketchMatching.pdf)
 Shuang Liang, Jun Luo, Wenyin Liu, *Yichen Wei*
 TPAMI 2015
